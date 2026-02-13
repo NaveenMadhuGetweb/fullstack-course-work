@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Horizontal Navigation Bar</title>
+        <style>
+            ul{
+                background-color:blueviolet;
+                list-style:none;
+                margin:0;
+                padding:0;
+            }
+            li{
+                display:inline;
+                /* float:left; */
+                background-color:aqua;
+            }
+            li a{
+                display:inline-block;
+                background-color:antiquewhite;
+                padding:30px 30px;
+                font-weight:bold;
+            }
+            li a.home{
+                background-color:aquamarine;
+            }
+            /* li a:hover{
+                background-color:wheat;
+                font-weight:bold;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+            } */
+            li a:hover:not(.home){
+                background-color:wheat;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                font-weight:bold;
+                font-size:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Horizontal Navigation Bar</h1>
+        <ul>
+            <li><a class="home">Home</a></li>
+            <li><a>Contacts</a></li>
+            <li><a>Projects</a></li>
+            <li><a>Abouts</a></li>
+            <li><a>Settings</a></li>
+        </ul>
+    </body>
+</html>

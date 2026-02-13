@@ -7,31 +7,41 @@
                 background-color:aquamarine;
                 list-style:none;
                 margin:0;
-                padding:0;
+                padding:0;                
             }
             li{
                 background-color:darkkhaki;
+                width:50%;                      /* for my understanding */
+                /* color:blueviolet; */
                 /* float:left; */
                 display:inline;
             }
             li a{
-                display:inline-block;
+                display:block;
                 background-color:yellowgreen;
                 padding:25px 30px;
+                width:150px;
+                text-decoration:none;
+                font-family:cursive;
             }
-            li a:hover{
-                background-color:darkslategray;
+
+            li a.home{
+                background-color:springgreen;
+            }
+            li a:hover:not(.home) {
+                background-color: yellow;
+                color:brown;
             }
         </style>
     </head>
     <body>
         <h1>Vertical Navigaion Bar</h1>
         <ul>
-            <li><a>Home</a></li>
-            <li><a>Contacts</a></li>
-            <li><a>Projects</a></li>
-            <li><a>Bio Data</a></li>
-            <li><a>About</a></li>
+            <li><a class="home" href="#home">Home</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#biodata">Bio Data</a></li>
+            <li><a href="#about">About</a></li>
         </ul>
     </body>
 </html>
