@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cards</title>
+        <style>
+            div.cards{
+                background-color:lightslategrey;
+                width:200px;
+                height:250px;
+                border:2px solid red;
+                float: left;
+                margin:5px;            /* spacing between cards */
+                padding:15px;
+                border-radius:10px;
+                opacity:0.8;
+            }
+            div.cards:hover{
+                border:4px solid black;
+                opacity:1;
+            }
+            div a img{
+                /* height:350px; */   /* height will not work here because of height=auto */  
+                border-radius:10px;
+                width:100%;
+                height:auto;          /* this is important here the most */
+            }
+            div div.card-content{
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cards">
+            <a href="images/book.jpg" target="_blank">
+                <img src="images/tedy.jpg">
+            </a>   
+                <div class="card-content">
+                    <p>This is a tedy image description here</p>
+                </div>
+        </div>
+        <div class="cards">
+            <a href="images/book.jpg" target="_blank">
+                <img src="images/tedy.jpg">
+            </a>   
+                <div class="card-content">
+                <p>This is a tedy image description here</p>
+                </div>
+        </div>
+    </body>
+</html>
