@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gradient Practice</title>
+        <style>
+            #grade1{
+                height:200px;
+                background-image:linear-gradient(red,blue);
+            }
+            #grade2{
+                height:200px;
+                background-image:linear-gradient(to right, green, blue);    /* we can use here "to left" */
+            }
+            #grade3{
+                height:200px;
+                background-image:linear-gradient(to left,rgb(255, 0, 0), rgba(43, 255, 0, 0.175));
+            }
+            #grade4{
+                height:200px;
+                width:200px;
+                background-image:radial-gradient(red,blue,yellow);
+            }
+            #grade5{
+                height:200px;
+                width:200px;
+                background-image:radial-gradient(red 10%, blue 20%, yellow 50%);
+            }
+            #grade6{
+                height:150px;
+                width:200px;
+                background-image:radial-gradient(circle, red, blue, yellow);
+            }
+            #grade7{
+                height:200px;
+                width:200px;
+                background-image:repeating-radial-gradient(pink,green 15%,yellow 20%);
+            }
+            #grade8{
+                height:200px;
+                width:200px;
+                background-image:conic-gradient(red,blue,yellow);
+            }
+            #grade9{
+                height:200px;
+                width:200px;
+                background-image:conic-gradient(green 45deg,yellow 200deg, red 210deg);   /* i have to practice here more here*/
+            }
+            #grade10{
+                height:200px;
+                width:200px;
+                background-image:conic-gradient(red, blue, yellow);
+                border-radius:50%;
+            }
+            #grade11{
+                height:200px;
+                width:200px;
+                background-image:repeating-conic-gradient(blue 20%, yellow 30%);
+                border-radius:50%;
+            }
+        </style>
+    </head>
+    <body>
+        Linear Gradient <div id="grade1"></div>
+        Left to right   <div id="grade2"></div>
+        Transparancy    <div id="grade3"></div>
+        Radial Gradient <div id="grade4"></div>
+        Radial Gradient - Differently Spaced Color Stops <div id="grade5"></div>
+        Radial Gradient Sapes<br>
+        1.ellipse shape (default), like grade4<br>
+        2.circle below;
+        <div id="grade6"></div>
+        Repeating radial gradient <div id="grade7"></div>
+        Conic Gradient - Three Colors <div id="grade8"></div>
+        Conic Gradient - Defined degree for each color <div id="grade9"></div>
+        Conic Gradient - pie chart  <div id="grade10"></div>
+        Repeating Conic Gradient <div id="grade11"></div>
+    </body>
+</html>
