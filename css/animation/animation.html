@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animation</title>
+        <style>
+            #animation1{
+                height:120px;
+                width:120px;
+                background-color:yellow;
+                animation-name:animationOne;
+                animation-duration:2s;
+            }
+            @keyframes animationOne{
+                from{ background-color:red;}
+                to{ background-color:blue;}
+            }
+
+            #animation2{
+                height:120px;
+                width:120px;
+                background-color:brown;
+                animation-name:animationTwo;
+                animation-duration: 10s;
+            }
+
+            @keyframes animationTwo{                /* here % is how long color will be show*/
+                0%  { background-color:red;}      /* and 0% to 100% is animation duration seconds*/
+                20% { background-color: blue;}
+                40% { background-color: yellow;}
+                100% { background-color: green;}
+            }
+
+            #animation3{
+                width:120px;
+                height:120px;
+                position:relative;
+                background-color:orange;
+                animation-name:floatAnimation;
+                animation-duration:8s;
+            }
+            @keyframes floatAnimation{
+                /*colors and position changes too */
+                
+                0% {background-color:red; left:0px; top:0px;}
+                25% {background-color:yellow; left:200px; top:0px;}
+                50% {background-color:blue; left:200px; top:200px;}
+                75% {background-color:green; left:0px; top:200px;}
+                100% {background-color:red; left:0px; top:0px;}
+            }
+            #animation4{
+                height:120px;
+                width:120px;
+                background-color:aqua;
+                position:relative;
+                animation-name:delayAnimationandMore;
+                animation-duration: 3s;
+                animation-delay: 3s;                        /* this property will delay animation */
+                /* animation-iteration-count: 3;  */        /* this property will animate specified counts times */
+                /* animation-iteration-count: infinite; */  /*  will animating continuously*/
+                animation-direction: reverse;
+            }
+            @keyframes delayAnimationandMore{
+                0% {background-color:red; left:0px; top:0px;}
+                25% {background-color:yellow; left:200px; top:0px;}
+                50% {background-color:blue; left:200px; top:200px;}
+                75% {background-color:green; left:0px; top:200px;}  
+                100% {background-color:red; left:0px; top:0px;}
+            }
+
+            #fortimingfns{
+                width: 100px;
+                height: 50px;
+                background-color: red;
+                position: relative;
+                animation: mymove 3s infinite linear;
+                /* animation-timing-function: ease-in; */     /*  linear, ease, ease-in, ease-out, ease-in-out; */
+            }
+            @keyframes mymove {
+                from {left: 0px;}
+                to {left: 300px;}
+            }
+
+
+
+
+            h2{
+                height:50px;
+                width:100px;
+                position:relative;
+                animation-name : MoveUp;
+                background-color:skyblue;
+            }
+            @keyframes MoveUp{
+                from{
+                    opacity: 0;
+                    transform:translateY(20px);
+                }
+                to{
+                    opacity:1;
+                    transform:translateY(0px);
+                }
+            }
+
+            .divLtoR{
+                width:100px;
+                height:40px;
+                background-color:grey;
+                position:relative;
+                /* animation-name:leftToright; */
+                animation: leftToright 5s infinite;
+            }
+            @keyframes leftToright{
+                from{
+                    left:600px;
+                }
+                to{
+                    left:0px;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1 style="margin:0; padding:0;">Animation</h1>
+        <div id="animation1">2 color Animation</div> <br>
+        <div id="animation2">more than 2 color changs</div>
+        <div id="animation3">Animation both changes colors and position</div>
+         <div id="animation4">delay and reverse animation</div>
+
+        Timing Function are : linear, ease, ease-in, ease-out, ease-in-out 
+        <p>to view difference change the value of animation-timing-function</p>
+        <div id="fortimingfns">i'm linear</div>
+
+
+        <h2>moveup</h2> <!-- ask doubt why not moved also its advanced topic -->
+
+        <div class="divLtoR">simple set position </div>
+
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+     <head>
+        <title>Transition Practice</title>
+        <style>
+            div.trans1{
+                width:120px;
+                height:120px;
+                background-color:blue;
+                transition-property: width;
+                transition-duration: 2s;
+                transition-timing-function:ease;
+                transition-delay: 1s;
+            }
+            div:hover{
+                width:500px;
+            }
+
+            div.transhort{
+                width:150px;
+                height:150px;
+                background-color: aqua;
+                transition:width 2s ease-in 3s;
+            }
+            div.transhort:hover{
+                width:600px;
+            }
+
+            div.transMulti{
+                width:100px;
+                height:100px;
+                background-color:yellow;
+                transition:width 2s,height 2s, background-color 4s,color 5s, text-align 5s;
+            }
+            div.transMulti:hover{
+                width:300px;
+                height:300px;
+                text-align: center;
+                background-color:brown;
+                color:white;
+            }
+
+            div.transNdform{
+                width:100px;
+                height:100px;
+                background-color:green;
+                transition: width 2s, height 2s, background-color 3s,transform 5s; /* we should give all changing properties here.*/
+            }
+            div.transNdform:hover{
+                width:300px;
+                height:300px;
+                background-color:red;
+                transform:rotate(190deg);
+            }
+
+        </style>
+     </head>
+     <body>
+        <h2>Transition of single property</h2>
+        <div class="trans1"></div>
+
+        <h2>Transition shorthand property</h2>
+        <div class="transhort"><p>defined me single line</p></div>
+
+        <h2>Transition of multiple property</h2>
+        <div class="transMulti"><p>i'm changing</p></div>
+        
+        <h2>Transition + Transform</h2>
+        <div class="transNdform"><p></p></div>
+     </body>
+</html>

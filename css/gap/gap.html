@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gap</title>
+        <style>
+            div.divContainer1{
+                background-color:grey;
+                height:600px;
+                width:60%;                  /* here %  value calculate from body of page */
+                /* padding:20px; */
+                margin-left: auto;
+                margin-right:auto;
+                display:flex;
+                flex-wrap:wrap;
+                gap:0px 5px;
+            }
+            div.divContainer1  div{
+                height:70%;                 /* here % value calculate from flext container. */
+                width:7%;
+                /* padding:10px; */
+                background-color:tomato;
+                margin:auto;                /* purpose of centering div elements to containr. */
+
+            }
+
+            div.divContainer2{
+                background-color:violet;
+                border:2px solid red;
+                display:grid;
+                grid-template-columns:auto auto auto auto auto;
+                gap:20px 20px;
+                /* height:500px; */
+                /* margin-left:auto;
+                margin-right: auto; */
+                margin:auto;                        /* auto is to align container in center; */
+                width:80%;
+        
+            }
+            div.divContainer2 > div{
+                background-color:blueviolet;
+                padding:10px 10px;
+
+            }
+            div.multi-column{
+                height:200px; 
+                columns:3;
+                gap:50px;
+                background-color:wheat;
+                border:2px solid green;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Container alligned center and also with gap  by flexbox</h2>
+        <div class="divContainer1">
+            <div>item1</div>
+            <div>item2</div>
+            <div>item3</div>
+            <div>item4</div>
+            <div>item5</div>
+            <div>item6</div>
+            <div>item7</div>
+            <div>item8</div>
+            <div>item9</div>
+            <div>item10</div>            
+        </div>
+
+        <h2>container alligned center with used grid(Used gap here also)</h2>
+        <div class="divContainer2">
+            <div>item1</div>
+            <div>item2</div>
+            <div>item3</div>
+            <div>item4</div>
+            <div>item5</div>
+            <div>item6</div>
+            <div>item7</div>
+            <div>item8</div>
+            <div>item8</div>
+            <div>item10</div>
+        </div>
+     
+        <h2>Multi-Column Layout</h2>
+        <div class="multi-column">
+            Nature content covers the physical world's living organisms, ecosystems, and, in scientific terms, the laws and elements of the universe. It includes wildlife, plants, habitats, weather, and landscapes, often focusing on biodiversity conservation and the interdependence of species. Major themes include climate change, conservation, and human interaction with the natural world.
+        </div>
+
+    </body>
+</html>
