@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Galary Task</title>
+        <style>            
+            body{
+                margin:0;
+                padding:0;
+            }
+            #top-section-banner{
+                background-image:linear-gradient(to right, rgb(10, 165, 10),rgb(3, 177, 246));
+            }
+
+            #top-section{
+                padding: 70px 10px;
+                width:50%;
+                margin: auto;
+                color:white;
+                
+                /* background-color: transparent;     learned while code this property */
+                /* background-color: chocolate; */
+            }
+            
+            ul{
+                list-style-type: none;
+                max-width: 100%;
+                /* background-color:aquamarine; */
+                /* display: flex; */                      /* display:flex; and justify-content:center; is working for items allign center*/
+                /* justify-content: center; */            /* this is CSS Align concept in w3schools need to practice more like this to understand fully; */
+                margin:auto;                               /* implemented https://www.w3schools.com/css/tryit.asp?filename=trycss_align_container */
+                width: 60%;
+            }
+            li{
+                margin-left: 10px;
+                width:170px;
+                height:150px;
+                display: inline-block;              /* this helps to lists floting horisontal order */
+            }
+            img{
+                width:inherit;
+                height:inherit;
+            }
+            li p{
+                color:white;
+                font-weight: bold;
+                padding:5px 10px;
+                background-color:grey;
+                top:-50px;
+                opacity: 0.6;
+                position:relative;          /* p tag position will be popup because of this. the positions will be movable*/
+            }
+            li:first-child{
+                top:-25px;
+                position:relative;
+            }
+
+            div.section3{
+                display: flex;
+                flex-wrap: wrap;
+                width: auto;
+/*                flex-direction:row;             /* row is default but mentioned for understanding */   
+                background-color: chartreuse;
+                /* gap; */
+                /* display:grid;
+                grid-template-columns: auto auto auto auto;
+                gap:-5px; */
+
+            }
+            .section3 img{
+                /* margin:0px;
+                padding: 0px; */
+                /* margin-left:0px; */
+                /* display: inline; */
+                width:337px;
+                height:200px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="top-section-banner">
+            <div id="top-section">
+                <h1 style="font-weight: bold; font-family: cursive;">CSS Image Gallery Task</h1>
+                <p style="font-size: 20px; font-weight:lighter;">Use this multi-functional image gallery to share your awesome image and video content with the audience of yur website! It has a wide range of useful features and customizing options.</p>
+            </div>
+        </div>
+
+        <h2 style="text-align: center;">Image With Subtitles</h2> <br>
+        <ul>
+            <li>
+                <img src="images/portfolio-1.jpg">
+                <p>type caption here</p>
+            </li>
+            <li>
+                <img src="images/portfolio-2.jpg">
+                <p>type caption here</p>
+            </li>
+            <li>
+                <img src="images/portfolio-3.jpg">
+                <p>type caption here</p>
+            </li>
+            <li>
+                <img src="images/portfolio-4.jpg">
+                <p>type caption here</p>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <img src="images/portfolio-5.jpg">
+                <p>type caption here</p>
+            </li>
+            <li>
+                <img src="images/portfolio-6.jpg">
+                <p>type caption here</p>
+            </li>
+            <li>
+                <img src="images/flute.jfif">
+                <p>type caption here</p>
+            </li>
+            <li>
+                <img src="images/musical.jfif">
+                <p>type caption here</p>
+            </li>
+        </ul>
+
+        <h2 style="text-align: center;">Responsive and Mobile Friendly</h2> <br>
+
+        <div class="section3">
+            <img src="images/portfolio-1.jpg">
+            <img src="images/portfolio-2.jpg">
+            <img src="images/flute.jfif">
+            <img src="images/portfolio-4.jpg">
+            <img src="images/portfolio-6.jpg">
+            <img src="images/portfolio-5.jpg">
+            <img src="images/portfolio-3.jpg ">
+            <img src="images/musical.jfif">            
+        </div>
+
+    </body>
+</html>
