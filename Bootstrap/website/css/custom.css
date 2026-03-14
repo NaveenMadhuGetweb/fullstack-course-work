@@ -1,0 +1,158 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:cursive;
+}
+
+
+body{
+    background-image: url('../images/canada.jpg');
+    /* background-image: linear-gradient(grey, black,lightpink); */
+    background-size: cover;
+    background-repeat:repeat-x;
+    background-position: center;
+    /* width: 100%; */
+}
+
+/* navigation bar */
+#topnav li a:hover{
+    background-color: grey;
+    text-shadow: -10px -20px 2px red;           /* same like below */
+    box-shadow: 15px 10px 16px black;           /* 15->HR-DR  10->VR-DR 16->shadow-pxls end-clr*/
+}
+
+/*
+.navbar-nav .nav-item{
+  flex: 1;                    /* This makes all items equal width 
+  text-align: center;
+  padding: 30px;
+}   */
+
+.navbar-nav{
+    width: 100%;
+}
+
+/* row 2 mobile app content */
+
+.mobile-app-content{
+    /* background-color: pink; */
+    width: 360px;
+    color:white;
+    position:relative;
+}
+#learn-more-btn{
+    width: 200px;
+    height: 50px;
+    /* border:none; */
+    border-radius:0;
+    margin-top:30px;
+}
+
+/* row 2 mobile preview */
+.mobile-preview{
+    margin-top:20px;
+    height: 600px;
+    width:330px;
+    /* background-color: lightpink; */
+    border: 3px solid white;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    border-radius: 25px;
+}
+
+.mobile-preview .your-app{
+    width:300px;
+    height:550px;
+    background-color:white;
+    border:1px solid white;
+    border-radius: 25px !important;
+    /* opacity: 0.5; */
+
+}
+.inside-mobile{
+    /* height:120px; */
+    /* background-color: lightslategray; */
+    margin:10px;
+    display: flex;
+    flex-direction: row;                    /*this is default but mentioned for understanding */
+    text-align: center;
+    justify-content: center;          /* this if for Horizontal center */
+    align-items: center;                    /* vertical center align */ 
+   
+   
+    /* padding: 20px; */
+    border-radius: 15px;
+}
+
+.inside-mobile div{
+    background-color:white;
+    /* flex: 1; */
+    padding: 20px;
+    margin: 5px;
+}
+
+#fa{
+    height:70px;
+    width:70px;
+    /* background-color: white; */
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.card-div{
+    background-color: white;
+    width: 400px !important;
+    margin:20px;
+    border-radius: 30px;
+    padding: 90px !important;           /*overriding padding from default padding */
+    text-align: center;                 /* align texts only center to card */
+}
+
+#cardlogo{
+    /* background-color: brown; */
+    border: 3px solid black;
+    height:100px;
+    width: 100px;
+    margin: auto;                /* centering logo */
+    border-radius: 50%;
+    /* align "logo" center to verticaly and horizontaly */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type=email]{
+    /* background-color: red; */
+    height: 50px;
+    width: 60%;                         
+    border: 1px solid black;
+    border-radius: 0px;
+}
+#UpBtn{
+    width: 35%;
+    height:50px;
+    border-radius: 0px;
+}
+.footer{
+    height: 130px;
+    width: 100%;
+}
+
+@media screen and (max-width:576px){
+
+    #parallo-nav{
+        width: 100% !important;
+        padding: 10px;
+    }
+    #learn-more-btn{
+        display: flex;
+        align-items:center; 
+        margin: auto;
+        background-color:bisque !important;
+    }
+
+}
