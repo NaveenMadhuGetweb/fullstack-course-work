@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Form and input types</h1>
+    <label>labels</label>
+    <input type="text" name="uname"> Name<br>
+    <input type="number" name="uname" min="1" max="5" autofocus> Contact<br>
+    <input type="date" name="date" min="2000-01-01" max="2026-01-01"> Date<br>
+    <input type="email" name="uemail"> Email<br>
+    <input type="datetime-local" name="time"> time<br>
+    <input type="month" name="month"> Month<br>
+    <input type="password" name="upwd">Password<br>
+    <input type="tel" name="Telphone" pattern="[0-9]{3}-[0-9]{2}-[0-9]-{3}">Telphone Number<br>
+    <input type="hidden" name="hidefield"> hidden<br>
+    <input type="color" name="clr"> Color Picker<br><br>
+    <input type="file" name="sourcefile">Choose file <br><br>
+ 
+    Skills(checkbox)
+    <input type="checkbox" name="skills">HTML<br>
+    <input type="checkbox" name="skills">CSS<br>
+    <input type="checkbox" name="skills">JavaScript<br><br>
+    
+    Gender(radio Buttons)
+    <input type="radio" name="gender">Male<br>
+    <input type="radio" name="gender">Female<br><br>
+    
+    range
+    <input type="range" min="0" max="50" name="uname">range field<br>
+    <input type="search" name="sh">Search Box<br>
+    <input type="reset" name="r">Reset Btn<br>
+    <input type="week" name="wek">Enter Week<br>
+    <input type="url" name="url-f">Enter Url<br>
+    <input type="submit" name="submitbtn">Submit <br>
+    <button type="submit">i'm button</button>     <!-- type = button, reset, submit -->
+    <br><br>
+    
+    Select (Dropdown list)
+    <select name="options">
+        <option value="op1">Option1</option>
+        <option value="op2">Option2</option>
+        <option value="op3">Option3</option>
+    </select> <br><br>
+    
+    Message(textare)
+    <textarea cols="10" rows="10"></textarea>
+
+    <p> datalist tag used to <strong>predefined options</strong> and its not restricted to must use this options</p>
+    <input list="broweres" id="browser">
+    <datalist id="broweres">
+        <option value="chrome"></option>
+        <option value="Edge"></option>
+        <option value="Safari"></option>
+    </datalist>
+
+
+
+</body>
+</html>

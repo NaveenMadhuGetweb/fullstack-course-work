@@ -2,6 +2,17 @@
 <html>
     <head>
         <title>Html Learning</title>
+        
+        <!-- below concept for set icon to title bar -->
+        <link rel="" type="image/x-icon" href="#filepath.icon">
+        <style>
+            table,th,td{
+                border: 2px solid black;
+                border-collapse: collapse; /* :separate; is default   */
+                padding: 15px;
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
         <h1>Heading Tag h1</h1>
@@ -10,5 +21,93 @@
         <h4>Heading Tag h4</h4>
         <h5>Heading Tag h5</h5>
         <h6>Heading Tag h6</h6>
+
+        <p> &lt p &gt paragraph tag </p>
+        <img src="#" title="image tag used to show image" height="100px" width="100px"><br>
+        <p>below is anchor tag has attributes target="_blank", _self, _parent, _top </p>
+        <a href="#"> &lt a &gtanchor tag used to link another page or links</a>
+        <br> &lt br &gt tag used to break line
+        <pre>&lt pre &gt formated texts will be change here</pre>
+        <b>used to bold text</b><br>
+        <strong>strong tag</strong><br>
+        <i>italic tag for italic design</i><br>
+        <em>emphasized tag</em><br>
+        <mark>marked tag</mark><br>
+        <small>small tag used to change texts smaller</small><br>
+        <del>delted design texts</del><br>
+        <ins>insered tag</ins><br>
+        <p> superscript tag used to X<sup>2</sup></p>
+        <p> subscript tag used to H<sub>2</sub>O</p>
+
+        <q>quotation tag used to quote texts</q>
+        <!-- <abbr>texts</abbr> -->
+        <!-- <bdo>hhi</bdo> -->
+        <address>address tag used to show address (some design will apply to texts)</address>
+        <cite>citation tag (some design wil apply)</cite>
+        <blockquote>blockquote tag used to show lot contents </blockquote>
+
+        <p>below is map and area tag used to make the specic part of area clickable (shapes avaible like rectangle, circle, polygone )</p>
+        <img src="#img.jpg" alt="this image will updated soon" height="200px" width="200px">
+        <map>
+            <area shape="circle" coords="34,44,270,350" alt="this place will make it clickable" href="#filename.html">
+        </map>
+        
+        <p>table tag for table,  tr -> trable row th->table heading  td-> table data </p>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>robert alex</td>
+                <td>33</td>
+            </tr>
+        </table>
+
+        <p> list tags used to group set of related items in lists </p>
+        <p> (ol, ul)-(li), (dl, dt, dd) </p>
+        <p> li list item tag</p>
+        
+        <p> ul unordered list tag</p>
+        <ul type="square">                                <!-- type = circle(default), square,desc -->
+            <li>noncountable list item 1</li>
+            <li>noncountable list item 2</li>
+            <li>noncountable list item 3</li>
+        </ul>
+
+        <p> ol ordered list tag</p>
+        <ol type="A">                         <!-- type = 1(default), A, a, I, i -->
+            <li>countable list item 1</li>
+            <li>countable list item 2</li>
+            <li>countable list item 3</li>
+        </ol>
+
+        <p> dl description list</p>
+        <p> dt description term(Name) list</p>
+        <p> dd description data list</p>
+        <dl>
+            <dt>Birds</dt>
+            <dd>can fly over the sky</dd>
+            <dt>Dog</dt>
+            <dd>can be pet animal</dd>
+        </dl>
+
+        <br>        
+        <button type="button"> button tag used to create btn </button>  <!-- type = button, reset, submit -->
+        <br><br>
+
+        <p> style tag used write css code declared in head  </p>
+        <p> script tag used write script code and used to link external script file it can be in head or body </p>
+        <p> &lt link &gt tag used to link external files like css,js, declared in head </p>
+<br>
+        <p>form tag for create form. lable tag for lable, input tag for create input box </p>
+        <form>
+            form tag for create form 
+            <label>Name</label>
+            <input type="text"> ...
+        </form>
+<br>
+        <p> kbd for to specify keybord shortcut key <kbd>ctrl+s</kbd> </p>
+ 
     </body>
 </html>
