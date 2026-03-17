@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>cssForm</title>
+        <style>
+            .form-div{
+                height:auto;
+                width:500px;
+                background-color:greenyellow;
+            }
+            label{
+                background-color: palevioletred;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="form-div">
+            <h4>User Input Form and Its Types</h4>
+            <form action="#fname" method="post" novalidate>                               <!-- get/post -->
+                <label>text</label>
+                <input type="text" size="30" maxlength="5"><br>                <!-- default size="20" and maxlength input size limitation -->
+                <label>number</label>
+                <input type="number" max="6" min="2" autofocus><br>
+                <label>Gender(radio)</label><br>
+                Male<input type="radio" value="male" name=""><br>
+                Female<input type="radio" value="female" name="">  <br>              
+                <label>Password</label>
+                <input type="password" name="" required><br>
+                <label>Country(options)</label>
+                <select name="country">
+                    <option value="india">India</option>
+                    <option value="usa" disabled>USA</option>
+                    <option value="africa" selected>Africa</option>
+                </select><br>
+                <label>Skills(checkbox)</label>
+                <input type="checkbox" value="html">Html
+                <input type="checkbox" value="css">Css
+                <input type="checkbox" value="javascript">JavaScript  <br>
+                <label>Email</label>
+                <input type="email" name="" pattern="[]"><br>
+                <label>color</label>
+                <input type="color" name=""><br>
+                <lable>date</lable>
+                <input type="date" name=""><br>
+                <lable>file</lable>
+                <input type="file" multiple><br>
+                <label>month</label>
+                <input type="month"><br>
+                <lable>search</lable>
+                <input type="search"><br>
+                <label>hidden</label>
+                <input type="hidden"><br>
+                <label>time</label>
+                <input type="time"><br>
+                <label>range</label>
+                <input type="range" min="0" max="50" name="uname"><br> <!-- min and max between 0-100 for value that process backend  -->
+                <label>url</label>
+                <input type="url"><br>
+                <label>Message(textarea)</label>
+                <textarea cols="20" rows="10" name=""></textarea><br>
+                <lable>Image</lable>
+                <input type="image" src="" height="40" width="40" style="border-radius: 50%;"><br>
+                <label>button</label>
+                <input type="button" formaction="#url" value="submitbtn"><br>
+                <label>submit</label>
+                <input type="submit" formenctype="multipart/form-data" formtarget="_self"  formnovalidate onclick=""><br>
+                
+                
+                <label>Select (Dropdown list)</label>
+                <select name="options">
+                    <option value="op1">Option1</option>
+                    <option value="op2">Option2</option>
+                    <option value="op3">Option3</option>
+                </select> <br><br>
+                
+                <label>reset</label>
+                <input type="reset"><br>
+                
+            </form>
+        </div>
+    </body>

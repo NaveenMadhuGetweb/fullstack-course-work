@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bootstrap Basic</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <p class="h1">Heading classes</p>
+        <br>
+
+        <p class="h1">Heading One</p>
+        <p class="h2">Heading Two</p>
+        <p class="h3">Heading Three</p>
+        <p class="h4">Heading Four</p>
+        <p class="h5">Heading Five</p>
+        <p class="h6">Heading Six</p> <br>
+
+
+        <p class="h1">Display Heading Classes</p>
+        <br>
+
+        <p class="display-1">Display One</p>
+        <p class="display-2">Display Two</p>
+        <p class="display-3">Display Three</p>
+        <p class="display-4">Display Four</p>
+        <p class="display-5">Display Five</p>
+        <p class="display-6">Display Six</p>
+        <br>
+
+        <p class="h2">Containers</p>
+        <div class="container bg-secondary">
+            <p>for the purpose of container</p>
+            <p>for the purpose of container</p>
+        </div>
+
+        <div class="container-fluid bg-secondary">
+            <p>for the purpose of container</p>
+            <p>for the purpose of container</p>
+        </div>
+
+        <br><p class="h2">Grid</p>
+        <div class="container bg-success">
+            <p>.col         (extra small devices) less than 576px </p>
+            <p>.col-sm-          (small devices) grater than 576px </p>
+            <p>.col-md-          (medium devices) grater than 768px </p>
+            <p>.col-lg-          (large devices) grater than 992px </p>
+            <p>.col-xl-         (xlarge devices) grater than 1200px </p>
+            <p>.col-xxl-          (xxlarge devices) grater than 1400px </p>
+        </div>
+
+        <p class="h2">Grid</p>
+        <p class="display-6">All device adjustable</p>
+        <div class="row bg-warning">
+            <div class="col">column-1</div>
+            <div class="col">column-2</div>
+            <div class="col">column-3</div>
+        </div>
+
+
+        <br><p class="display-6">Responsive Columns</p>
+        <p>Notice here, size of columns that equalize 12 columns always</p>
+        <p>Notice here, columns will append one by one when screen is less than 576px</p>
+
+        <div class="row bg-warning">
+            <div class="col-sm-3">(col-sm-3) column-1</div>
+            <div class="col-sm-3">(col-sm-3) column-2</div>
+            <div class="col-sm-3">(col-sm-3) column-3</div>            
+            <div class="col-sm-3">(col-sm-3) column-4</div>
+        </div>
+        <br>
+
+        <div class="row bg-warning">
+            <div class="col-sm-4 bg-info">(col-sm-4) column-1</div>
+            <div class="col-sm-8 bg-warning">(col-sm-8) column-2 this will compress when less than 576px</div>
+        </div>
+
+        <br>
+        <p class="display-6">Typography</p>
+        <!-- <h1>Heading <small>small-</small></h1> -->
+        <p>About tags like<small>small tag</small> <i>italic</i> and even <mark>mark tag</mark></p>
+        <blockquote class="blockquote">
+            Lot's of contents we can paste here and will it conver like block quotes model
+            <p>use p tag and</p><footer>footer tag  much more </footer>
+        </blockquote>
+        <code> code tag red colorded text</code>
+        <kbd> keyboard tag kbd for like to mention ctrl+p </kbd>
+        <p> we can use tags without mention class names like dl dt dd and some much more.</p>
+
+        <p class="display-6">some classes about texts</p>
+        <p class="text-center">text-center class</p>
+        <p class="text-lowercase">text-lowercase class</p>
+        <p class="text-uppercase">text-uppercase class</p>
+        <p class="text-capitalize">text-capitalize class</p>
+        <p class="text-muted">ptag texts text-muted <a class="text-decoration-none" href="#">a tag text-decoration-none classe</a></p>
+        <br>
+        
+        <p class="display-6">classes colors</p>
+        <p class="bg-primary text-center"> bg-primary class</p>
+        <p class="bg-success text-center"> bg-success class</p>
+        <p class="bg-info text-center"> bg-info class</p>
+        <p class="bg-warning text-center"> bg-warning class</p>
+        <p class="bg-danger text-center"> bg-danger class</p>
+        <p class="bg-secondary text-center"> bg-secondary class</p>
+        <p class="bg-light text-center"> bg-light class</p>
+        <p class="bg-dark text-center text-white"> bg-dark class</p>
+        <br>
+
+        <p class="display-6">Tables</p>
+        <table class="table table-bordered table-hover table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>phone</th>
+                    <th>Qualification</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>rahul</td>
+                    <td>8870..</td>
+                    <td>UG</td>
+                </tr>
+                <tr>
+                    <td>salman</td>
+                    <td>9976..</td>
+                    <td>PG</td>
+                </tr>
+                <tr>
+                    <td>peter</td>
+                    <td>7870..</td>
+                    <td>UG + PG</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+
+        <table class="table table-bordered table-hover table-striped  table-danger table-borderless table-active table-sm">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>phone</th>
+                    <th>Qualification</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>rahul</td>
+                    <td>8870..</td>
+                    <td>UG</td>
+                </tr>
+                <tr>
+                    <td>salman</td>
+                    <td class="text-primary">9976..</td>
+                    <td class="text-white">PG</td>                              <!-- here, colors are used like text-light, text-dark, text-primary, text-secondary, upto 6 -->
+                </tr>
+                <tr>
+                    <td>peter</td>
+                    <td>7870..</td>
+                    <td>UG + PG</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="table table-info table-responsive">       <!-- we can mention sizes here like table-responsive-sm md lg xl xxl --->
+            <tr>                                                <!-- if declare sizes than will create scroll bar when hit the size limit of viewport of size classes -->
+                <th>Years</th>
+            </tr>
+            <tr>
+                <th>2011</th>
+                <th>2012</th>
+                <th>2013</th>
+                <th>2014</th>
+                <th>2015</th>
+                <th>2016</th>
+                <th>2017</th>
+                <th>2018</th>
+                <th>2019</th>
+                <th>2020</th>
+                <th>2021</th>
+                <th>2022</th>
+                <th>2023</th>
+                <th>2024</th>
+                <th>2025</th>
+                <th>2026</th>
+                <th>2027</th>
+                <th>2028</th>
+                <th>2029</th>
+                <th>2030</th>                    
+            </tr>
+        </table>
+        <br>
+
+        <p class="display-6">Images</p>
+        rounded<img class="rounded" src="images/violin.jfif" width="200px" height="">
+        rounded-circle<img class="rounded-circle" src="images/violin.jfif" width="200px">
+        img-thumnail<img class="img-thumnail" src="images/violin.jfif" width="200px">
+        <br>
+        
+        <div class="container bg-info">
+            <p class="display-6"><small>display block class</small></p>
+            <img class="d-block" src="images/violin.jfif" width="200px">
+            display inline 1<img class="d-inline" src="images/violin.jfif" width="200px">
+            display inline 2<img class="d-inline" src="images/violin.jfif" width="200px">
+        </div><br>
+
+        <div class="container bg-secondary">            
+            <p class="display-6"><small>Aling</small></p>
+            allign float-start class<img class="d-block float-start" src="images/violin.jfif" width="200px">
+            allign float-center class<img class="d-block float-end" src="images/violin.jfif" width="200px">
+            allign float-end class<img class="d-block mx-auto " src="images/violin.jfif" width="200px">
+        </div><br>
+
+        <div class="container bg-warning">
+            <p class="display-6"><small>responnsive Image</small></p>
+            img-fluid<img class="img-fluid" src="images/violin.jfif"><br><br><br>           <!-- class will apply some styles with mx-width:100%, height:auto; -->
+            without using fluid<img src="images/violin.jfif">
+        </div><br>
+
+
+        <div class="container">
+            <p class="display-6"><small>alert</small></p> alert alert-success alert-dismissible btn-close data-bs-dismiss="alert"
+            <div class="alert alert-success alert-dismissible">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                alert messeges!
+                <!-- <button class="btn btn-primary">alert button </button>  -->
+                <!-- <a class="btn-close" data-bs-dismiss="alert">cl</a> -->
+                <!-- hii -->
+
+            </div>
+            fade show<div class="alert alert-success alert-dismissible fade show">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                alert messeges!
+            </div>            
+        </div>
+        <br>
+
+        <div class="container d-block ">
+            <p class="display-6"><small>alert (used in p tag)</small></p>
+            <div class="alert alert-success alert-dismissible">
+                <p type="button" class="btn btn-lg btn-close btn-success" data-bs-dismiss="alert"></p>
+                alert message used in p tag 
+            </div>
+        </div>
+        <br>
+
+        <div class="container" style="background-color:rgb(173, 114, 114);">
+            
+            <p class="display-6"><small>Buttons</small></p>
+            we can use btn classes to a button input tags maximum
+            <a class="btn btn-warning"> a tag</a>
+            <button class="btn btn-success">button tag</button>
+            <input type="button" class="btn btn-primary" value="input tag Button">
+            <br>
+
+            we can use btn-outline-primary, secondary, success, info, warning, danger, dark, light
+            <button class="btn btn-success btn-outline-dark">button tag</button>
+            <button class="btn btn-secondary btn-outline-warning">button tag</button>
+            <button class="btn btn-light btn-outline-info">button tag</button>
+            <br>
+
+            button sizes
+            <button class="btn btn-primary"> default size</button>
+            <button class="btn btn-success btn-lg">Large button</button>
+            <button class="btn btn-info btn-sm">small button</button>
+            <br>
+
+            block level buttons
+            <button class="btn btn-warning btn-block">full width button</button>
+            <br>
+
+            Gap
+            <div class="d-grid gap-3">
+                <button class="btn btn-success">button 1</button>
+                <button class="btn btn-success">button 2</button>
+                <button class="btn btn-success">button 3</button>
+                <button class="btn btn-success">button 4</button>
+            </div>    
+            <br>
+
+            Active and Disabled
+            <button class="btn btn-success active">active</button>
+            <button class="btn btn-success">normal</button>
+            <button class="btn btn-success disabled">disabled</button>            
+            
+            spinners with buttons with sizes with colors
+            <div>
+                simple spinner <span class="spinner-border text-danger spinner-border-sm"></span>       <!-- type => spinner-border and spinner-grow-->
+                <button class="btn btn-primary">
+                    <span class="spinner-border spinner-border-sm"></span>                              <!-- can use spinner-border-sm,lg,md(default) -->
+                    Spinner Button1 sm
+                </button>
+                <button class="btn btn-primary">
+                    <span class="spinner-border text-warning spinner-border-lg"></span>                 <!-- we can use collors here text-warning,primary,danger,dark,.. -->
+                    Spinner border Button2 lg 
+                </button>
+                <button class="btn btn-primary">
+                    <span class="spinner-grow spinner-grow-sm"></span>    
+                    Spinner grow Button3
+                </button>
+            </div>
+        </div>
+        <br>
+
+        <div class="container">
+            <p class="display-6">Progress Bar</p>
+            normal progress bar
+            <div class="progress">
+                <div class="progress-bar bg-info" style="width:40%;"></div>
+            </div>
+            
+            progress bar with label
+            <div class="progress">
+                <div class="progress-bar bg-info" style="width:40%;">40%</div>
+            </div>
+                  
+            striped progress bar
+            <div class="progress">
+                <div class="progress-bar bg-info progress-bar-striped" style="width:40%;">40%</div>
+            </div>
+
+            animated progress bar
+            <div class="progress">
+                <div class="progress-bar bg-info progress-bar-animated" style="width:40%;">40%</div>
+            </div>
+
+            multiple progress bar
+            <div class="progress">
+                <div class="progress-bar bg-success" style="width:40%;">40%</div>
+                <div class="progress-bar bg-warning " style="width:20%;">20%</div>
+                <div class="progress-bar bg-danger " style="width:10%;">10%</div>
+            </div>            
+        </div>
+        <br>
+
+
+        <p class="display-6">Pagination</p>
+        simple structure
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link"> page 1</a></li>
+            <li class="page-item"><a class="page-link"> page 2</a></li>
+            <li class="page-item"><a class="page-link"> page 3</a></li>
+            <li class="page-item"><a class="page-link"> page 4</a></li>
+            <li class="page-item"><a class="page-link"> page 5</a></li>
+        </ul>
+        <br>
+
+        states
+        <ul class="pagination">
+            <li class="page-item active"><a class="page-link"> page 1</a></li>
+            <li class="page-item"><a class="page-link"> page 2</a></li>
+            <li class="page-item disabled"><a class="page-link"> page 3</a></li>
+            <li class="page-item"><a class="page-link"> page 4</a></li>
+            <li class="page-item"><a class="page-link"> page 5</a></li>
+        </ul>
+        <br>
+
+        <div class="container">
+            <p class="display-6">pagination sizeses</p>
+            large
+            <ul class="pagination pagination-lg">
+                <li class="page-item active"><a class="page-link"> page 1</a></li>
+                <li class="page-item"><a class="page-link"> page 2</a></li>
+                <li class="page-item disabled"><a class="page-link"> page 3</a></li>
+                <li class="page-item"><a class="page-link"> page 4</a></li>
+                <li class="page-item"><a class="page-link"> page 5</a></li>
+            </ul>
+            medium(default - md)
+            <ul class="pagination">
+                <li class="page-item active"><a class="page-link"> page 1</a></li>
+                <li class="page-item"><a class="page-link"> page 2</a></li>
+                <li class="page-item disabled"><a class="page-link"> page 3</a></li>
+                <li class="page-item"><a class="page-link"> page 4</a></li>
+                <li class="page-item"><a class="page-link"> page 5</a></li>
+            </ul>
+            sizes
+            <ul class="pagination pagination-sm">
+                <li class="page-item active"><a class="page-link"> page 1</a></li>
+                <li class="page-item"><a class="page-link"> page 2</a></li>
+                <li class="page-item disabled"><a class="page-link"> page 3</a></li>
+                <li class="page-item"><a class="page-link"> page 4</a></li>
+                <li class="page-item"><a class="page-link"> page 5</a></li>
+            </ul>
+        </div>
+        <br>
+
+        <div class="container">
+            <p class="display-6">pagination sizeses</p>
+            left default
+            <ul class="pagination pagination-lg">
+                <li class="page-item active"><a class="page-link"> page 1</a></li>
+                <li class="page-item"><a class="page-link"> page 2</a></li>
+                <li class="page-item disabled"><a class="page-link"> page 3</a></li>
+                <li class="page-item"><a class="page-link"> page 4</a></li>
+                <li class="page-item"><a class="page-link"> page 5</a></li>
+            </ul>
+            centerd justify-content-center
+            <ul class="pagination justify-content-center">
+                <li class="page-item active"><a class="page-link"> page 1</a></li>
+                <li class="page-item"><a class="page-link"> page 2</a></li>
+                <li class="page-item disabled"><a class="page-link"> page 3</a></li>
+                <li class="page-item"><a class="page-link"> page 4</a></li>
+                <li class="page-item"><a class="page-link"> page 5</a></li>
+            </ul>
+            right justify-content-end
+            <ul class="pagination pagination-sm justify-content-end">
+                <li class="page-item active"><a class="page-link"> page 1</a></li>
+                <li class="page-item"><a class="page-link"> page 2</a></li>
+                <li class="page-item disabled"><a class="page-link"> page 3</a></li>
+                <li class="page-item"><a class="page-link"> page 4</a></li>
+                <li class="page-item"><a class="page-link"> page 5</a></li>
+            </ul>
+        </div>
+        <br>
+
+        <div class="container">
+            <p class="display-6">nav (Menu tabs )</p>
+            structure
+            <ul class="nav">
+               <li class="nav-item"><a class="nav-link">tab (Page)1</a></li> 
+               <li class="nav-item"><a class="nav-link">tab (Page)2</a></li> 
+               <li class="nav-item"><a class="nav-link">tab (Page)3</a></li> 
+               <li class="nav-item"><a class="nav-link">tab (Page)4</a></li> 
+            </ul>
+            <br>
+            
+            states and alignment center (justify-content-center)
+            <ul class="nav justify-content-center ">
+               <li class="nav-item"><a class="nav-link">tab (Page)1</a></li> 
+               <li class="nav-item active"><a class="nav-link">tab (Page)2</a></li> 
+               <li class="nav-item"><a class="nav-link">tab (Page)3</a></li> 
+               <li class="nav-item disabled"><a class="nav-link">tab (Page)4</a></li> 
+            </ul>
+            <br>
+
+            states and alignment right (justify-content-end)
+            <ul class="nav justify-content-end">
+               <li class="nav-item"><a class="nav-link">tab (Page)1</a></li> 
+               <li class="nav-item active"><a class="nav-link">tab (Page)2</a></li> 
+               <li class="nav-item disabled"><a class="nav-link">tab (Page)3</a></li> 
+               <li class="nav-item"><a class="nav-link">tab (Page)4</a></li> 
+            </ul>
+            <br>
+
+            vertical nav (flex-column)
+            <ul class="nav flex-column">
+               <li class="nav-item"><a class="nav-link">tab (Page)1</a></li> 
+               <li class="nav-item active"><a class="nav-link">tab (Page)2</a></li> 
+               <li class="nav-item disabled"><a class="nav-link">tab (Page)3</a></li> 
+               <li class="nav-item"><a class="nav-link">tab (Page)4</a></li> 
+            </ul>
+            <br>
+
+            nav tabs (nav-tabs)
+            <ul class="nav nav-tabs">
+               <li class="nav-item"><a class="nav-link">tab (Page)1</a></li> 
+               <li class="nav-item active"><a class="nav-link">tab (Page)2</a></li> 
+               <li class="nav-item disabled"><a class="nav-link">tab (Page)3</a></li> 
+               <li class="nav-item"><a class="nav-link">tab (Page)4</a></li> 
+            </ul>
+            <br>
+
+            nav pills
+            <ul class="nav nav-tabs nav-pills">
+               <li class="nav-item"><a class="nav-link">tab (Page)1</a></li> 
+               <li class="nav-item active"><a class="nav-link">tab (Page)2</a></li> 
+               <li class="nav-item disabled"><a class="nav-link">tab (Page)3</a></li> 
+               <li class="nav-item"><a class="nav-link">tab (Page)4</a></li> 
+            </ul>
+            <br>
+
+            <p>Dropdown</p>
+            <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                    dropdown button
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item">item-1</a></li>
+                    <li><a class="dropdown-item">item-2</a></li>
+                    <li><a class="dropdown-item">item-3</a></li>
+                </ul>
+            </div>
+
+<br><br>            
+
+            <div class="container">
+                <p>Dropdown and i'ts classes(dropdown-divider)</p>
+                <div class="dropdown dropstart ">  <!-- dropend, dropstart -->
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                        dropdown button
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item">item-1</a></li>
+                        <li><span class="dropdown-item-text">item-2 item dropdown item text</span></li>
+                        <li><a class="dropdown-item">item-3</a></li>
+                        <hr class="dropdown-divider">
+                        <li><a class="dropdown-item">item-4</a></li>
+                        <li><a class="dropdown-item">item-5</a></li>
+                        <hr class="dropdown-divider">
+                        <li><h3 class="dropdown-header">Header class<h3></li>
+                        <li><a class="dropdown-item">item-7</a></li>
+                        <li><a class="dropdown-item active">item-8 active class</a></li>
+                        <li><a class="dropdown-item disabled">item-8 disabled class</a></li>
+                   </ul>
+                </div>
+            </div>
+<br><br><hr>
+
+            <p>collapse concept</p>
+            <button data-bs-toggle="collapse" data-bs-target="#contentid" class="btn btn-warning">click me to collapse</button>
+            <div id="contentid" class="collapse  btn btn-success">
+                contents
+            </div>
+            
+            <p>collapse concept (make card collapse)</p>
+            <button data-bs-toggle="collapse" data-bs-target="#card-con-id" class="btn btn-warning">click me to collapse</button>
+            <div id="card-con-id" class="collapse" style="width: 25%;">
+                <div class="card">
+                    <div class="card-header">card heading</div>
+                    <div class="card-body">card contentsss</div>
+                    <div class="card-footer">card footer</div>
+                </div>
+            </div>
+<br>            
+            <p>collapse concept (make closable when one of card shown)</p>
+            <div class="accordion">
+            </div>
+<hr>
+
+            <h3>Horizontal Navigation Bar</h3>
+            <nav class="navbar navbar-expand bg-info" style="height: 100px;">
+                <div class="container-fluid">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"> <a class="nav-link navbar-brand">
+                                <img src="images/violin.jfif" class="rounded-circle" height="50" width="50" title="violin image">
+                            </a></li>
+                        <li class="nav-item"> <a class="nav-link">Home</a></li>
+                        <li class="nav-item"> <a class="nav-link active">About</a></li>
+                        <li class="nav-item"> <a class="nav-link disabled">Services</a></li>
+                        <li class="nav-item"> <a class="nav-link">Products</a></li>
+                    </ul>
+                </div>
+            </nav>
+<br><br><hr>
+
+            <h3>Vertical Navigation Bar</h3>
+            <nav class="navbar bg-info p-4" style="height: auto; width: 50%; letter-spacing: 10px;">
+                <div class="container-fluid">
+                    <ul class="navbar-nav p-5">
+                        <li class="nav-item p-1"> <a class="nav-link navbar-brand">
+                                <img src="images/violin.jfif" class="rounded-circle" height="50" width="50" title="violin image">
+                            </a></li>
+                        <li class="nav-item p-1"> <a class="nav-link">Home</a></li>
+                        <li class="nav-item p-1"> <a class="nav-link active">About</a></li>
+                        <li class="nav-item p-1"> <a class="nav-link disabled">Services</a></li>
+                        <li class="nav-item p-1"> <a class="nav-link">Products</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div style="height: 200px;"></div>
+        </div>
+    </body>
+</html>
