@@ -60,7 +60,8 @@
                 animation-direction: reverse;
             }
             @keyframes delayAnimationandMore{
-                0% {background-color:red; left:0px; top:0px;}
+                /* % are calculated based of animation duration seconds */
+                0% {background-color:red; left:0px; top:0px;}           
                 25% {background-color:yellow; left:200px; top:0px;}
                 50% {background-color:blue; left:200px; top:200px;}
                 75% {background-color:green; left:0px; top:200px;}  
@@ -72,7 +73,7 @@
                 height: 50px;
                 background-color: red;
                 position: relative;
-                animation: mymove 3s infinite linear;
+                animation: mymove 3s infinite linear; 
                 /* animation-timing-function: ease-in; */     /*  linear, ease, ease-in, ease-out, ease-in-out; */
             }
             @keyframes mymove {
@@ -80,6 +81,21 @@
                 to {left: 300px;}
             }
 
+
+            #end{
+                width: 100px;
+                height: 100px;
+                margin-top:10px;
+                background: red;
+                position: relative;
+                animation: mymove 3s;
+                /* animation-direction:reverse; */
+                animation-fill-mode: forwards;          /*forwards, backwards, both */
+            }
+            @keyframes mymove {
+                from {left: 0px;}
+                to {left: 300px;}
+            }
 
 
 
@@ -107,6 +123,7 @@
                 background-color:grey;
                 position:relative;
                 /* animation-name:leftToright; */
+                /* animation-iteration-count:infinite; */    /* 1,2,3... or infinite */
                 animation: leftToright 5s infinite;
             }
             @keyframes leftToright{
@@ -115,6 +132,20 @@
                 }
                 to{
                     left:0px;
+                }
+            }
+
+
+
+            .blink {
+                animation: blinker 2.5s linear infinite;
+                color: red;
+                font-family: sans-serif;
+            }
+
+            @keyframes blinker {
+                50%{
+                    opacity: 0;
                 }
             }
 
@@ -131,10 +162,16 @@
         <p>to view difference change the value of animation-timing-function</p>
         <div id="fortimingfns">i'm linear</div>
 
+        <div id="end">i'm linear top end</div>
 
         <h2>moveup</h2> <!-- ask doubt why not moved also its advanced topic -->
 
         <div class="divLtoR">simple set position </div>
+
+
+
+        <marquee class="blink">This is an example of blinking text using CSS within a marquee.</marquee>
+
 
     </body>
 </html>
