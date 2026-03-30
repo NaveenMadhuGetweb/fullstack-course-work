@@ -156,3 +156,34 @@ input[type=email]{
     }
 
 }
+
+
+/*  @media (min-width: 768px) {  Styles for screens 768px wide or greater  }
+    @media (max-width: 600px) {  Styles for screens 600px wide or less  }
+/*  Range syntax (modern): */
+/* @media (600px <= width <= 1200px) {  Styles for screens between 600px and 1200px */ }
+
+
+
+/* small devices */
+/* @media (max-width: 576px){ 
+    .class-name{
+        background-color: blue !important;
+    }
+} */
+
+/* medium devices */
+/* @media (max-width: 768px){
+    .class-name{
+        background-color: red !important;
+    }
+} */
+
+/* Large devices */
+/* @media (max-width: 992px){
+    .class-name{
+        background-color: yellow !important;
+    }
+
+} */
+
