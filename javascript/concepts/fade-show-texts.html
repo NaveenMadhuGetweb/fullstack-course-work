@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .items {
+            opacity: 0;
+            transition: opacity 1s ease-out, transform 1s ease-out;
+            transform: translateY(20px);
+        }
+        /*  . items.show → applied when BOTH classes exist it's triggers by js*/
+        /* this class will add work on <div class="item show">  */
+        .items.show {                   
+          opacity: 1;
+          background-color: blue;   
+          transform: translate(0);       /* moves back to original position of div container */
+        }
+
+    </style>
+</head>
+<body>
+  <!-- this class wil change (<div class="items show>") by js and defined css will apply -->
+    <div class="items" style="background-color: yellow;">
+        <h1>animate check</h1>
+        <!-- <div class="show "><h1> show</h1></div> -->
+        <div class="custom" style="background-color: brown;"><h1> Custom</h1></div>
+    </div>
+
+<script>
+// Below code is for text animation (ease in texts)
+document.addEventListener("DOMContentLoaded", function(event) {
+    // Code to be executed when the DOM is ready
+    console.log("DOM fully loaded and parsed");
+    // You can safely access and manipulate HTML elements here
+
+// Callback function to run when an element intersects
+const intersectionCallback = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');   // Add the animation class
+    //   observer.unobserve(entry.target); // Optional: stop observing after animation plays once
+    }
+  });
+};
+
+// Create a new observer
+const observer = new IntersectionObserver(intersectionCallback);
+
+// Select all elements to animate and observe them
+const items = document.querySelectorAll('.items');
+items.forEach(item => {
+  observer.observe(item);
+});
+
+
+});
+</script>
+
+
+</body>
+</html>

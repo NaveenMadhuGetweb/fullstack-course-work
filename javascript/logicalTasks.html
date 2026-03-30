@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <p>TASKS</p>
+    <p>Revers a number (123) => (321)</p> 
+    <p>sum of n numer / Find the sum of numbers from 1 to 4 (output will: 10)</p>
+    <p>check prime Numbers (divisible by one and itself)</p>
+    <p>Count Digits in Number ("489" - no. of digits is 3)</p>
+    <p>Factorial number (5! => 1*2*3*4 = 24 / logically 4*3*2*1 )</p>
+
+
+
+    <p>Revers a number</p> 
+    <input type="number" id="input">
+    <button onclick="myFun1()">find out</button>
+    <span id="op"></span>
+    <script>
+        function myFun1(){
+            var num = document.getElementById('input').value;   // num is string variable
+            var len = num.length;                               // used "length" string method 
+            // document.write(typeof(num), " : ", len);
+            var out="";
+            for(let x=len-1;  x>=0; x--){
+                 out = out + num[x];
+            }
+            document.getElementById('op').innerHTML = out;
+            // document.write(out);
+        }
+    </script>    
+
+ 
+
+
+
+    <p>Sum of n Numbers</p>   <!-- 10 =>   1+2+3+4+5+6+7+8+9+10 = 55-->
+    <input type="number" id="input">
+    <button onclick="myFun2()">find out</button>
+    <span id="op1"></span>
+    <script>
+        function myFun2(){
+            var num = Number(document.getElementById('input').value);   // num is string variable
+            var str = num.toString();
+            var len = str.length;                               // used "length" string method 
+            document.write(typeof(num), typeof(str), " : ", num);
+            dd();
+            var tot=0;
+            for(let x=0;  x<=num; x++){ 
+                tot = tot + x;
+                // num = num--;
+                document.write("ex-times");
+            }
+            document.getElementById('op1').innerHTML = tot;
+        }
+    </script>
+
+
+
+
+
+
+
+
+    <!-- find small and large in number array -->
+
+<p> find small and large in number array [5,3,7,1,9]</p>
+<P id="op2"></P>
+
+<script>
+    var num = [5,3,7,1,9];    
+    // document.getElementById('op2').innerHTML = num[0];
+    var len = num.length;
+    var temp=0;
+    for(let i=0; i<len; i++){
+        for(let j=i+1; j<=len; j++){
+            if(num[i] > num[j]){                // arrange orders if (asscending >) or (decending <) 
+                temp = num[i];
+                num[i] = num[j];
+                num[j] = temp;
+            }
+        }
+    }
+    document.getElementById('op2').innerHTML = "small-No: " + num[0] + "big-No" + num[len-1] ;
+
+</script>
+
+
+
+
+
+</body>
+</html>
+
+
+<!-- 
+
+Number Convertion
+    var str = "12345";
+        num = str.toString();   //
+
+
+String convertion
+    var num = 123;
+        str = String(num);      // str.length;
+
+
+
+//find length array variable
+const numers = [12,3,4,5,6];
+const arrLen = numbers.length;
+console.log(arrLen);       //op: 5
+
+
+//find length in number variable (for this we should conver number to string first)
+    var num = 123;
+        str = String(num);      
+        len = str.length;
+ -->

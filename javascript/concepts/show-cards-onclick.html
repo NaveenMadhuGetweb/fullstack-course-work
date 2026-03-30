@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cardss{
+            display: visible;  /* optional->  :visible */
+        }     
+
+        .card {
+            display: none;  /* optional->  :visible */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>below for single items</h1>
+<!-- method for single items -->
+    <div class="buttons">
+        <button onclick="showCard('card1')">Show Card 1</button>
+        <button onclick="showCard('card2')">Show Card 2</button>
+    </div>
+
+    <div class="cardss">
+        <div id="card1" class="cards">Card 1 Content</div>
+        <div id="card2" class="cards">Card 2 Content</div>
+    </div>
+
+<script>
+function showCard(cardId) {
+    // hide all cards
+    let cards = document.querySelectorAll('.cards');
+    // console.log(cards);
+    cards.forEach(card => {
+        console.log(card);
+        card.style.display = 'none';
+    });
+
+    // show selected card
+    document.getElementById(cardId).style.display = 'block';
+}
+</script>
+
+<!-- or use below method for single items -->
+<!-- <script>
+document.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', function() {
+        document.querySelectorAll('.card').forEach(c => c.style.display = 'none');
+        document.getElementById(this.dataset.target).style.display = 'block';
+    });
+});
+</script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- below for multiple items -->
+    <h1>below for multiple items</h1>
+    <div class="buttons">
+        <button onclick="filterCards('all')">Show all Cards</button>
+        <button onclick="filterCards('card-1')">Show Card 1</button>
+        <button onclick="filterCards('card-2')">Show Card 2</button>
+    </div>
+
+    <div class="cardss">
+        <div id="card1" class="card card-1">Card 1 Content</div>
+        <div id="card1" class="card card-1">Card 1 Content</div>
+        <div id="card1" class="card card-1">Card 1 Content</div>
+        <div id="card1" class="card card-1">Card 1 Content</div>
+        <div id="card2" class="card card-2">Card 2 Content</div>
+        <div id="card2" class="card card-2">Card 2 Content</div>
+        <div id="card2" class="card card-2">Card 2 Content</div>
+        <div id="card2" class="card card-2">Card 2 Content</div>
+    </div>
+
+<script>
+        function filterCards(group) {
+            let cards = document.querySelectorAll('.card');
+        
+            cards.forEach(card => {
+                if (group === 'all') {
+                    card.style.display = 'block';
+                } else if (card.classList.contains(group)) {       // we can compare here by card.id == group. 
+                    card.style.display = 'block';                   // but change the elements id names like id="card-1 , card-2 while compare by id"
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+</script>
+
+</body>
+</html>

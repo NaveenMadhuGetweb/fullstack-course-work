@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- js CDN(popper) for dropdowns, popovers,tooltips -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+    <form action="#_self" onsubmit="return verify()" method="">
+        <h1 class="fw-bold fs-1 display-1">Form Validation</h1>
+        <div class="form-group">
+            <label>Name</label>
+            <input class="form-control" type="text" id="name">
+        </div>
+
+        <div class="form-group">
+            <label>Mobile Number</label>
+            <input class="form-control" type="number" id="mbnumber">
+        </div>
+        <div class="form-group">
+            <label>Mobiel with correct format</label>
+            <input class="form-control" type="number" id="mbnumber-format">
+        </div>
+        <div class="form-group">
+            <label>Email Validation</label>
+            <input class="form-control" type="email" id="email">
+        </div>
+
+        <div class="form-group">
+            <!-- <label class="form-text">Submit</label> -->
+            <input class=" mt-5 btn btn-primary" type="submit" value="Submit">    <!-- type="submit" then only form will submit -->
+        </div>
+
+    </form>
+</div>   
+
+<script>
+
+    function verify(){
+        console.log("hi");
+        name = document.getElementById("name").value;
+        number = document.getElementById("mbnumber").value;
+        number_format = document.getElementById("mbnumber-format").value;
+        email = document.getElementById("email").value;
+
+        chknum = /^ ([0-1]{10}) $/;
+        chkemail = /^ ([a-z 0-9]) + \@ ([a-z]{5}) + \. ([a-z]{3}) $/;
+
+        if(name == ""){
+            alert("Enter Name");
+            return false;           // break the execution. returns false, to prevent the form from being submitted:
+        }
+        else if(number == ""){
+            alert("enter Number");
+            return false;
+        }
+        else if( !chknum.test(number_format)){
+            alert("Enter Mobile Number format");
+            return false;
+        }
+        else if(!chkemail.test(email)){
+            alert("enter correct forat email Id");
+            return false;
+        }
+
+
+    }
+
+</script>
+
+</body>
+</html>
+
+
+
+<script>
+    
+// In JavaScript, the primary test() function is a method of the RegExp (Regular Expression) object used for pattern matching in strings
+// Purpose: To determine if a pattern exists in a string. It is the most efficient way if you only need a simple true or false answer.
+// Syntax: regex.test(str)
+// Return Value:
+// true if a match is found.
+// false if no match is found
+
+//const text = "Tutorix is the best e-learning platform";
+
+// Example 1: Pattern found (case-sensitive)
+//const pattern1 = /Tu/; 
+//console.log(pattern1.test(text)); // Output: true
+
+// // Example 2: Pattern not found (case-sensitive)
+// const pattern2 = /tu/;
+// console.log(pattern2.test(text)); // Output: false
+
+// // Example 3: Case-insensitive testing using the 'i' flag
+// const pattern3 = /tu/i;
+// console.log(pattern3.test(text)); // Output: true
+
+</script>

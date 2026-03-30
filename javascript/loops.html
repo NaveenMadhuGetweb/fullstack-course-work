@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Loops()</h1>
+    <p>types-loops: for, for-in, for-of, while, do while</p>
+    <p><strong>for loop</strong></p>
+    <script>
+        // let x = 0;
+        for(let x=0; x<=5; x++){
+            document.write("x value: "+x+ "<br>");
+        }
+        // const carss = ["BMW", "Volvo", "Saab", "Ford"];
+        // let text = "";
+        // for (let i = 0; i < carss.length; i++) {
+        //     text += carss[i] + "<br>";
+        // }
+    </script>
+
+
+
+    <p><strong>for-in loop</strong></p>
+    <p>used to print objects values one by one or..</p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        // define object 
+        // ex-1
+        let cars = {name:"BMW", model:"1980"};      //object      
+        let info="";                                   //undefined variable
+
+        for(let key in cars){
+            info += cars[key];
+                document.write(alert("hi" + cars[key]));
+        }
+        // document.write(alert(info));
+        document.write("card Name: "+ info + "<br>" );
+        document.getElementById("demo1").innerHTML = "card Name:"+ info + "<br>";
+
+
+
+        // define an object
+        //ex-2
+        let person = {fname:"ram", lname:"sing", age:89};
+        let temp;
+        var txt="";
+        for(temp in person)             
+        {
+        // x is the key like fname, lname and age
+            txt += person[temp] + ":";
+        }
+        document.getElementById("demo2").innerHTML = txt;
+
+        //ex-3 (best example)
+        const personDt = { firstName: "John", lastName: "Doe", age: 30 };
+        for (const key in personDt) {
+          console.log(key + ": " + personDt[key]);
+        }
+        // Output:
+        // firstName: John
+        // lastName: Doe
+        // age: 30
+</script>
+
+
+
+
+    <p>for of loop</p>
+    <script>
+        // used in Array, String 
+        let abc = ['BMW','FERARI','VOLVO'];
+        let tv;
+        for(tv of abc)
+        {
+            document.write(tv + "<br>");
+        }
+    </script>
+
+
+    <p>while loop</p>
+    <script>
+        let x=0;
+        // var tem;
+        while(x<=7){
+            document.write("tem:" + x);
+            x++;
+        }
+    </script>
+
+    <p>do while loop</p>
+    <script>
+        let z=0;
+        do{
+            document.write("z is:" + z + "<br>");
+            z++;
+        }while(z<=5);
+    </script>
+
+    <!-- 
+    for in      -> used in Objects (used in mostly key and values)
+    for of      -> Used in arrays, strings, map, set
+    foreach()   -> a built-in function used to iterate over elements in Arrays, Maps, and Sets, executing a provided callback function once for each element
+    -->
+    <script>
+        let Person = { fname:"Marry", lname:"Crysta"}
+        for(let x in Person){
+            txt += Person[x] + ""; 
+            console.log("key:" + x + "values:" + Person[x]);
+        }
+        console.log("for in");
+        console.log(txt );
+    </script>
+
+
+    <script>
+        let str = ["w1","w2","w3"];
+        var txts;
+        for(let x of str){
+             txts += x + "";
+        }
+        console.log("for of");
+        console.log(txts);
+    </script>
+</body>
+</html>

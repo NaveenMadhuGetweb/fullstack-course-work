@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <p>Template String</p>
+    <p id="op"></p>
+    <script>
+        let header = "Heading Content";
+        let tags = ['item1','item2','item3'];
+        let html = `<h2>  ${ header } </h2>`;
+        for(const x of tags){
+            html += `<li> ${ x } </li>`;
+        }
+        html += `</ul>`;
+        document.getElementById('op').innerHTML = html;
+    </script>
+
+</body>
+</html>

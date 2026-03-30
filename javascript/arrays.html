@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrays</h1>
+    <p id="op1"></p>
+
+    <p id="op2"></p>
+    
+    <p id="op3"></p>
+
+    <p id="op4"></p>
+    
+
+    <button onclick="pushFun()">push to trees</button>
+    <p>add  value to trees</p>
+    <p id="op5"></p>
+
+    
+    <button onclick="popFun()">pop to trees</button>
+    <p>remove last value from trees</p>
+    <p id="op6"></p>
+
+    <button onclick="shiftFun()">shift to trees</button>
+    <p>shift .. value from trees</p>
+    <p id="op7"></p>
+
+
+    <script>
+        const trees = ["coconut","orcanut"];
+        document.getElementById("op1").innerHTML = trees;
+
+        const nums = [1,3,4,5];
+        // const chars = ['A','B','C']; 
+        // const bool = [true, false, true, true];
+        // const objs = [name ="john", age ="crystala"];
+        // const cars = new Array("BMW","Venue","Creta");
+
+        // insertion
+        const txts = [];
+        txts[0] = 10;
+        txts[1] = 15;
+        txts[2] = 30;
+        txts[3] = 20; 
+        document.getElementById('op2').innerHTML = "All Values:" + txts +" <br> index 3:"+ txts[3] + "lendth of the array is: " + txts.length; 
+
+
+
+        // (new) New Memory will allocate and...
+
+        const cars = new Array("BMW","Hundai","Creta");
+        document.getElementById('op3').innerHTML = cars;
+
+
+        cars[1] = "Hundai";
+        document.getElementById('op4').innerHTML = cars;
+       
+
+        // Array Predefined functions
+        function pushFun(){
+            trees.push("bannana");
+            trees.push("mango");
+            document.getElementById('op5').innerHTML = trees;
+        }
+        function popFun(){
+            trees.pop("bannana");
+            document.getElementById('op6').innerHTML = trees;
+        }
+
+        function shiftFun(){
+            trees.shift("bannana");
+            document.getElementById('op6').innerHTML = trees;
+        }
+
+        // need to know more about array functions and practice
+        
+    </script>
+</body>
+</html>

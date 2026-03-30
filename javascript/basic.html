@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <!-- <p id="ptag">Paragraph Tag</p> -->
+    <!-- <p id="ptagText">Paragraph Tag texts</p> -->
+
+<!--
+    <h1>Arthmetic Operations</h1>
+    
+    Addition : <p id="add"></p>
+    Subtraction : <p id="sub"></p>
+    Multiplication : <p id="mul"></p>
+    Division : <p id="div"></p>
+
+-->
+<!-- 
+    <p>Below task 1 (check positive or negative or zero)</p>
+    <p id="output"></p>
+ -->
+
+<!-- 
+    <p>Below task 2 (check vote eligible)</p>
+    <p id="vote"></p>
+-->
+
+
+ 
+    <p>Below task 3 (check grade system)</p>
+    <input type="number" id="marks"> Enter marks
+
+    <input type="button" onclick="myFunction()" value="calculate Marks">
+
+    <p id="grade">answer here</p>
+
+
+ <!-- 
+    <p id="name">sarukesh</p>
+    <input type="text" id="inputid" value="inputtagtexts"> 
+    <p id="out">output place</p>
+ -->
+
+
+<script>
+
+/*    
+    var x = 1;
+    var  temporary = "";
+    temporary =  document.getElementById('name').innerText;
+    document.getElementById('out').innerHTML = temporary;
+*/
+
+/*
+    var num = 1;
+    var char_A = 'A';
+    var string_S = "words lot"
+    var boolean_B = true;
+    var cars
+    
+    var txt = "i'm from script";
+    document.getElementById("ptag").innerHTML = txt;
+    document.getElementById("ptagText").innerText = txt;
+
+    document.getElementById("ptag").innerHTML = txt;
+    document.getElementById("ptagText").innerText = txt;
+    document.getElementById("ptag").innerHTML = txt;
+    document.getElementById("ptagText").innerText = txt;    
+    
+    var $num1 = 20;
+    var $num2 = 20;
+
+    var $add = $num1 + $num2;
+    var $sub = $num1 - $num2;
+    var $mul = $num1 * $num2;
+    var $div = $num1 / $num2;
+
+    document.getElementById('add').innerHTML = "->" + $add;
+    document.getElementById('sum').innerHTML = "->" + $sub;
+    document.getElementById('mul').innerHTML = "->" + $mul;
+    document.getElementById('div').innerHTML = "->" + $div;
+*/
+
+
+
+    // task 1 
+/*
+    var num = -20;
+    var answer;
+    if(num == 0){
+        answer = "zero";
+    }
+    else if(num > 0){
+        answer = "positive";
+    }
+    else if(num < 0){
+        answer ="negative";
+    }
+    else{
+        answer = "invalid";
+    }
+    document.getElementById("output").innerHTML = answer ; 
+
+*/
+
+/*
+        // task 2
+    var age = 20;
+    var person;
+    if(age > 18){
+        person = "Eligible";
+    }
+    else{
+        person = "not Eligible"
+    }
+    document.getElementById('vote').innerHTML = person;
+*/
+
+
+
+        // task 3
+function myFunction(){
+
+    var temp = document.getElementById('marks').value;
+    var marks = temp;
+    var grade;
+    if( marks >= 90){
+        grade = "A";
+    }
+    else if((marks >= 75) & (marks <= 89)){
+        grade = "B";
+    }
+    else if((marks >= 50) & (marks <= 74)){
+        grade = "C";
+    }    
+    else if(marks <= 50) {
+        grade = "Fail";
+    }
+    document.getElementById("grade").innerHTML = grade;
+
+}
+</script>
+
+
+
+
+
+<p>switch case</p>
+<input type="number" id="switchid">
+<button onclick="myFun()">clickMe</button>
+<p id="op"></p>
+<script>
+    // switch case
+function myFun(){
+    let sh = 3;
+    let in_val = Number(document.getElementById("switchid").value);
+    // document.write(typeof(in_val));
+   
+    temp="";
+    switch(in_val){
+        case 1 :
+                temp="case 1";
+                break;
+        case 2 :
+                temp ="case 2";
+                break;
+        case 3 :
+                temp = "case 3"; 
+                break;
+        default: 
+                temp = "invalid input";                                      
+    }
+
+    // document.write(temp);
+    document.getElementById("op").innerHTML = temp;
+}
+ </script>
+
+
+
+<p>Output Possiblities</p>
+<p>document.getElementById('').innerHTML/Text.</p>
+<p>document.getElementByClass('').innerHTML/Text.</p>
+<p>document.write();</p>
+<p>document.writeln();</p>
+<p>console.log();</p>
+</body>
+</html>

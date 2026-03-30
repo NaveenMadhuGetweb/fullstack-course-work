@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Class and Objects</h1>
+    <p id="op"></p>
+    <script>
+        class Car {
+            constructor(name,year){
+                this.name = name;
+                this.year = year;
+            }
+            age(){
+                let date = new Date();
+            return date.getFullYear() - this.year;
+        }
+        }
+        const mycar = new Car('Hundai', 2015);
+        // document.getElementById('op').innerHTML = mycar.name + mycar.year;
+        document.getElementById('op').innerHTML = mycar.age() + mycar.name + mycar.year;
+    </script>    
+
+
+
+    <h1>below is try catch</h1>
+    <p id="output"></p>
+    <script>
+        try{
+            let nums = [1,2,3];
+            if(nums){
+                // document.getElementById('output').innerHTML = nums[1] + nums[10] ;                  
+            }
+             if(nums){
+                // throw x.y..        // throw expectional (runtime errors will throw, not compile time errors) errors not syntax errors
+                // return x,y;       // catch block not catch erros by return keyword. should use throw keyword to work catch block.
+                throw nums[10];
+            }
+
+        }
+        catch(err){                 
+            document.getElementById('output').innerHTML = err;
+        }
+    </script>
+</body>
+</html>

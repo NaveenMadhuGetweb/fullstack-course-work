@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>heading tag</h1>
+    <p>string is group of characters</p>
+    <p>declare single or double quotes</p>
+    <p id="words">birds can fly</p>
+    <p id="JsId">output area</p>
+
+
+    String Length Function :  <span id="Jsstrlen"></span><br>
+
+    Escape Strings sequence (\") : <span id="escapeid"></span><br>
+
+    Strings as a Object: <span id="strobj"></span><br>
+    
+    Strings with equal operators: <span id="operId"></span><br>
+    
+    Strings Methods: <span id="methId"></span><br>
+        
+    <script>
+        let txt = "programming language";
+        document.getElementById("JsId").innerHTML = "Strings : " + txt;
+        
+        var str = document.getElementById("words").innerHTML;
+        document.getElementById("Jsstrlen").innerHTML = str.length;
+        
+        let txts = "we are   \"hiii\"  here  ";
+        document.getElementById("escapeid").innerHTML = txts;        
+
+        let strObj1 ="custom words";
+        let strObj2 = new String("custom words");
+
+        document.getElementById("strobj").innerHTML = typeof strObj2 + "<br> object Function: " + strObj2.charAt(0);
+
+        document.getElementById("operId").innerHTML = "<br> == operator:" + (strObj1 == strObj2) + "<br>=== operator: " + (strObj1 === strObj2);
+
+
+        document.getElementById("methId").innerHTML = "<br>slice fn: " + strObj1.slice(7,11) + "<br> length fu: " + strObj1.length + "<br> substring fn: " + strObj1.substring(4,8) + "<br> substr fn: " + strObj1.substr(4,8);
+
+        // need to know more about string functions more and practice
+ 
+ </script>    
+</body>
+</html>
