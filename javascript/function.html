@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h5>Function Declaration</h5>
+
+    <p>Function(No argument)</p>
+    <button onclick="myfun()">click me</button>
+    <span id="op1"></span>
+
+    <p>Function(with argument) and (Invoking)</p>
+    <input type="number" id="input1">
+    <input type="number" id="input2">
+    <button onclick="Fn()">click me</button>
+    <span id="op2"></span>
+
+    <p>Function constructor</p>
+    <p>used to set defaul value while load</p>
+    <span id="op3"></span>
+
+    <p>Below Invoking a function as a method (and used this keyword)</p>
+    <span id="op4"></span>
+
+    <p>Below Arrow Function (=>)</p>
+    <p>multiplication of two no's</p>
+    <span id="op5"></span><br>
+    <span id="op6"></span>
+
+
+    <h4>Modules</h4>
+    <p>to break up your code into separate files</p>
+    <p>uses -> it easier to maintain the code-base</p>
+    <p>modules concept achieved  rely on the <b>import</b>  and <b>export</b> statements.</p>
+    <br><i>below is(Import from named exports) (its not supported many cases due to ..)</i>
+    <span id="op7"></span>
+
+    <br><i>below is(Import from default exports)</i>
+    <span id="op8"></span>
+
+
+    <script>
+
+        function functionName(parameters) {
+            // code to be executed
+        }
+
+        function myfun(){
+            var y=5;
+            document.getElementById("op1").innerHTML = "myfun";
+        }
+
+        function Fn(){
+            let x = Number(document.getElementById('input1').value);
+            let y = Number(document.getElementById('input2').value);
+            // document.writeln(x,y);
+            let sum = myfunArr(x,y);
+            document.getElementById('op2').innerHTML = sum;
+            function myfunArr(a,b){
+                return a+b;
+            }
+        }
+
+        // function constructor need to see (briefly)
+        const n1 = new Function('a','b',"return a * b");
+        document.getElementById('op3').innerHTML = n1(5,5);
+
+
+
+        // invoking function as a method concept
+        // this is also concept of create function inside objects
+        let profile = { 
+            name : "john",
+            age : "30",
+            ql : "BSC",
+            skill : function(){
+                return this.name;
+            }    
+        }
+        document.getElementById('op4').innerHTML = profile.skill;
+
+
+
+        //Arrow (=>) function   used for 
+        // method - 1
+        let myFunction = (a, b) => a * b;
+        document.getElementById("op5").innerHTML = myFunction(5, 5);
+
+        // method - 2
+        var hello;
+        hello =() => { return "hi";}
+        document.getElementById("op6").innerHTML =hello();;
+
+        
+</script>
+
+<script type="module"> 
+    //modules
+    //Import from named exports
+    import {name,age} from "./myscript.js";
+    document.getElementById("op7").innerHTML= "name&age: " + name + age;
+</script>        
+
+<script type="module">
+    // Import from default export
+    import message from "./myscript2.js";
+    document.getElementById("op8").innerHTML = message();
+</script>
+
+
+
+</body>
+</html>
