@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <!-- First Prefer -->
+    <a href="https://example.com">
+      <button>Go</button>
+    </a>
+
+    <!-- Redirect Possiblities  -->
+    <button onclick="goToPage()">Go</button>
+    <button id="btn">Go</button>
+
+<script>
+
+    function goToPage() {
+        window.location.href = "https://example.com";       // user go back 
+        window.location.replace("https://example.com");     // user can't go back -> useful submit, payment form ...
+        window.location.assign("https://example.com");      // similar to href
+    }
+
+    // addEventListener (modern approach)
+    document.getElementById("btn").addEventListener("click", function() {
+        window.location.href = "https://example.com";
+    });
+
+</script>
+
+
+
+
+
+
+
+
+<button  onclick="Recipe('paratha')">Parota</button>
+<button  onclick="Recipe('chola-puri')">Chola Puri</button>
+
+<script>
+// My Organic Flour Mill Project -> recipe page options to redirect method concept
+// tow items added features 
+// This is My Reference For 1. Redirect pages by js  2.used without DOM
+function Recipe(recipe_name){
+    const routes = {
+    paratha: "../views/recipes/paratha.html",
+    chola_puri: "../views/recipes/chola-puri.html"
+  };
+  // window.location.href = routes.paratha;
+
+  var page;
+  switch(recipe_name){
+      case "paratha":
+                      // console.log("hi");
+                      page = routes.paratha;
+                      break;
+      case "chola-puri":
+                      page = routes.chola_puri;
+                      break;
+      default:
+                      page = "Not";
+  }
+    window.location.href = page;
+}
+
+
+        // document.getElementById("name").value
+        // document.querySelector("button").
+        // document.getElementById("btn").style
+        //    document.getElementById("btn").
+
+        // more need to write
+
+</script>  
+
+</body>
+</html>

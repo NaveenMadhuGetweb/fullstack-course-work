@@ -1,0 +1,58 @@
+<html>
+<head>
+
+    <style>
+        .carousel {
+          display: flex;
+          gap: 16px;
+          overflow-x: auto;
+          padding: 20px;
+        }
+        .recipe-card{
+          min-width: 250px;
+          height: 150px;
+          background: #3498db;
+          border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="scrollLeftSide()">◀</button>
+    <button onclick="scrollRight()">▶</button>
+    <div class="container">
+        <div class="carousel" id="CustomCaroId">
+                <div class="recipe-card">Card 1</div>
+                <div class="recipe-card">Card 2</div>
+                <div class="recipe-card">Card 3</div>
+                <div class="recipe-card">Card 4</div>
+                <div class="recipe-card">Card 5</div>
+                <div class="recipe-card">Card 6</div>
+                <div class="recipe-card">Card 7</div>
+                <div class="recipe-card">Card 8</div>
+            </div>    
+        </div>
+    </div>
+
+</body>
+<html>
+    
+<script>
+function scrollRight() {
+  let carouselQ = document.querySelector("#CustomCaroId");
+  carouselQ.scrollBy({
+    left: 300,
+    behavior: "smooth"
+  });
+}
+
+function scrollLeftSide(){
+  console.log("left");
+  let carouselQ = document.querySelector("#CustomCaroId");
+  carouselQ.scrollBy({
+    left: -300,
+    behavior: "smooth"
+  });
+}
+
+</script>

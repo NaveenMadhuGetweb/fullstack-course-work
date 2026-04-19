@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+/*
+    // This follows DOM conceply
+    $(document).ready(function(){
+
+    });
+
+    // This is shorhand of document ready (above)
+    // both are same only difference is shorter than that
+    //this is preferable for readablity and shorter
+    $(function(){
+
+    });
+*/
+
+
+
+
+    $(document).ready(function(){
+        $(".button").click(function(){
+            $("p").hide();
+            $("#access").hide();
+            $(".accessMe").hide();
+        });
+
+        $("h3").click(function(){
+            $(this).hide();
+        });
+
+        // multiple element selector
+        $("#btn").click(function(){
+            $("#divId, .divClass").hide();
+            $(this).hide();
+        });
+        
+        // css funtion
+        $("#fr-bg-btn").click(function(){
+            $("#frbg").css("background-color","red");
+            $(this).css("background-color", "green");
+        });
+
+        // $("*")  Universal selectors and we can use all selectors like used in css
+        $("*").css("font-size","30px");
+        $("p.intro").css("background-color","blue");
+
+        $(".spanbtn").click(function(){
+            $("span:first").hide();
+        });
+
+        // $("ul li:first") , css - single, multiple properties
+        $(".btn2").click(function(){
+            $("ul li:first").hide();
+            $("h4").css("background-color", "green");
+            $("h5").css({
+                "color" : "red",
+                "font-size" : "60px",
+                "background-color" : "yellow"
+            });
+        });
+
+        $("#id1").dblclick(function(){
+            $(this).css("color", "green");
+            alert("double clicked");
+        });
+        $("#id2").mouseenter(function(){
+            $(this).css("color", "yellow");
+            alert("mouse entered");            
+        });
+        $("#id3").mouseleave(function(){
+            $(this).css("color", "blue");
+            alert("mouse leaved");
+        });
+        $("#id4").mousedown(function(){
+            $(this).css("color", "red");
+            alert("mouse downed");
+        });
+        
+        //funtion effect one by one
+        $("#id5").hover(function(){
+            $(this).css("background-color", "pink");
+        },
+          function(){
+            alert(" i'll arive after css works");
+          }
+        );
+        
+    });
+
+</script>
+
+
+    <button class="button">click Button</button>
+    <p>hide me</p>
+
+    <p>for Element</p>
+    <p id="access">for Id</p>
+    <p class="accessMe">for Class</p>
+    <h3>for this fn</h3>
+
+    <button id="btn">Click for multiple selectors</button>
+    <div>for Element</div>
+    <div id="divId">for Id</div>
+    <div class="divClass">for Class</div>
+    <div>for this fn</div>
+
+    <button id="fr-bg-btn">Click for perform .css function</button>
+    <p id="frbg">My background will change</p>
+
+    <p class="intro">$(p.intro) selector</p>
+
+    <button class="spanbtn">click to $(span:first)</button>
+    <span>span1</span>
+    <span>span2</span>
+
+    <br><br><br><br>
+    <button class="btn2">click to $(ul li:first) and mention css multiple properties mention</button>
+    <ul>
+        <li>list-1</li>
+        <li>list-2</li>
+        <li>list-3</li>
+    </ul>
+    <h4>For Single css Properties $("h4").css("background-color","grey"); </h4>
+    <h5>For Multiple css Properties $("h5").css({ //"color":"red", "font-size" : "50px", ...... }) </h5>
+
+
+
+    <h4 id="id1"> Double click me(dblclick funtion)</h4>
+    <h4 id="id2"> Enter Mouse (mouseenter funtion)</h4>
+    <h4 id="id3"> Leave Mouse (mouseleave funtion)</h4>
+    <h4 id="id4"> Mouse Down  (mousedown funtion)</h4>
+    <h4 id="id5"> Hover Me (hover funtion) effects one by one </h4>
+
+ 
+
+
+</body>
+</html>
