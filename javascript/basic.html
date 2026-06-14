@@ -7,10 +7,18 @@
 </head>
 <body>
     <h1>JavaScript</h1>
-    <!-- <p id="ptag">Paragraph Tag</p> -->
-    <!-- <p id="ptagText">Paragraph Tag texts</p> -->
+    <p id="ptag">Paragraph Tag</p>
+    <p id="ptagText">Paragraph Tag texts</p>
+ 
+    <p id="ptag1">Paragraph1</p>
+    <p id="ptag2">Paragraph2</p>
 
-<!--
+    <p id="testing">for testing</p>
+
+    <p id="testRealDiff">
+        Hello <b>World</b>
+    </p>
+
     <h1>Arthmetic Operations</h1>
     
     Addition : <p id="add"></p>
@@ -18,7 +26,6 @@
     Multiplication : <p id="mul"></p>
     Division : <p id="div"></p>
 
--->
 <!-- 
     <p>Below task 1 (check positive or negative or zero)</p>
     <p id="output"></p>
@@ -30,14 +37,14 @@
 -->
 
 
- 
+ <!-- 
     <p>Below task 3 (check grade system)</p>
     <input type="number" id="marks"> Enter marks
 
     <input type="button" onclick="myFunction()" value="calculate Marks">
 
     <p id="grade">answer here</p>
-
+ -->
 
  <!-- 
     <p id="name">sarukesh</p>
@@ -55,7 +62,7 @@
     document.getElementById('out').innerHTML = temporary;
 */
 
-/*
+
     var num = 1;
     var char_A = 'A';
     var string_S = "words lot"
@@ -63,14 +70,27 @@
     var cars
     
     var txt = "i'm from script";
-    document.getElementById("ptag").innerHTML = txt;
-    document.getElementById("ptagText").innerText = txt;
+    var htmlMarkup = "<h1>Hello</h1>";
+    document.getElementById("ptag").innerHTML = htmlMarkup;     // This will print -> Hello
+    document.getElementById("ptagText").innerText = htmlMarkup; // This will print -> <h1>Hello</h1>
 
-    document.getElementById("ptag").innerHTML = txt;
-    document.getElementById("ptagText").innerText = txt;
-    document.getElementById("ptag").innerHTML = txt;
-    document.getElementById("ptagText").innerText = txt;    
+    document.getElementById("ptag1").innerHTML = txt;           //OP: i'm from script
+    document.getElementById("ptag2").innerText = txt;           //OP: i'm from script
+
+    let storeval1 = document.getElementById("testing").innerHTML; // selecting p element by innerHTML
+    let storeval2 = document.getElementById("testing").innerText; //  selecting p element by innerText
+    console.log("innerHTML Value: ", storeval1);    //OP: for testing
+    console.log("innerText Value: ", storeval2);    //OP: for testing
+
+    let testRealDiffHTML = document.getElementById("testRealDiff").innerHTML; // selecting p element by innerHTML
+    let testRealDiffText = document.getElementById("testRealDiff").innerText; //  selecting p element by innerText
+    console.log("innerHTML Value: ", testRealDiffHTML); // Hello <b>World</b>
+    console.log("innerText Value: ", testRealDiffText); // Hello World
+
     
+    
+
+
     var $num1 = 20;
     var $num2 = 20;
 
@@ -83,7 +103,6 @@
     document.getElementById('sum').innerHTML = "->" + $sub;
     document.getElementById('mul').innerHTML = "->" + $mul;
     document.getElementById('div').innerHTML = "->" + $div;
-*/
 
 
 
@@ -181,12 +200,17 @@ function myFun(){
  </script>
 
 
-
-<p>Output Possiblities</p>
-<p>document.getElementById('').innerHTML/Text.</p>
-<p>document.getElementByClass('').innerHTML/Text.</p>
-<p>document.write();</p>
-<p>document.writeln();</p>
-<p>console.log();</p>
-</body>
-</html>
+<!-- 
+    <p>Output Possiblities</p>
+    <p>document.getElementById('').innerHTML/Text.</p>
+    <p>document.getElementsByClassName('').innerHTML/Text...</p>
+    <p>This is selects multiple (collection) specified class named elements accessable  by index like[0]</p>
+    <p>document.querySelector</p>
+    <p>This is selects first fetching single element</p>
+    <p>document.querySelectorAll</p>
+    <p>document.write(); -> use this is for debugging purpose</p>
+    <p>document.writeln();</p>
+    <p>console.log();</p>
+    </body>
+    </html>
+-->

@@ -23,34 +23,163 @@
 
 
             JavaScript non-strict Typed Language 
+
+            There are 7 primitive datatypes in javascript
+            string, number, boolean, undefined, null, bigInt, symbol
     
-    <script>        
-        //number
+            There are 3 non-primitive datatypes in javascript
+            object, arrays, function
+
+    <script>  
+        //primitive  
+
+        //1. number
         let n1 = 10;
         let n2 = 10.5;
+	    let n3 = -25;
 
-        //string
+        //2. string
         let s1 = "string1";
         let s2 = 'string2';
 
-        //char
+        // single character string (JavaScript has no char datatype) // This is also string not have specially "char" datatype in javascript
         let c1 = 'C';
+        console.log("The Check The \"c1\" Variable Datatype: ", typeof c1);
 
-        //Object
-        let person = { name:"john", age:"10", gender:"Male"};
+        //3. boolean        
+        let mybool = true;   // true/false
+
+        //4. undefined
+        let sample;                 // when variable declared but not assign a value called undefined type;
+        console.log("The Check The \"sample\" Variable Datatype: ", typeof sample);
+
+        //5. null
+        let chknull = null;
+        console.log("The Check The \"chknull\" Variable Datatype: ", typeof chknull); // object 
+/*
+        ⚠ This is a famous JavaScript bug/history issue.
+        Even though null is a primitive datatype,
+        typeof null returns "object".
+*/
+
+        //6. bigint
+        let bigNum = 123456789012345678901234567890n;
+	    console.log(bigNum);
+	    console.log(typeof bigNum);	// bigint
+
+        //7. symbol
+        let sym1 = Symbol();
+	    console.log(typeof sym1);	// symbol
 
 
-        // Array
+        // non-primitive
+        //1.Object
+        let person = { 
+            name:"john",
+            age:10,
+            gender:"Male"
+        };
+        console.log(person.name);       // access like this also -> .age and .gender
+        console.log(person["name"]);    // access like this also -> .["age"] and .["gender"] 
+        for(let key in person){             // Accessable using for "in loop"
+            console.log(key, person[key]);
+        }
+
+        //2. Array
         // number array
         let na = [5,3,1,2];
-        
-        // char array
+        for(let x of na){
+            console.log("array values:", x);
+        }
+
+        // not char array this is considered as string array
         let ca = ['A','B','C'];
         
         // string array
         let sa = ["name","age","gender"];
 
+        // 2. Empty Array
+        let arrr = [];
+        // You can add later:
+        arrr.push(10);
+
+        //Mixed Data Types Array
+        //JavaScript allows mixing types:
+        let arr = [1, "hello", true, null];
+
+        //4. Array of Objects (Very Important in Real Projects)
+        // 👉 Used in real eCommerce, API data, etc.
+        let users = [                           // []->array, {}->objects
+          { name: "John", age: 20 },            
+          { name: "Jane", age: 22 }
+        ];
+        console.log(users);
+        console.log(users[0]);  // { name: "John", age: 20 }
+        console.log(users[1]);  // { name: "Jane", age: 22 }
         
+        console.log(users[0].name);
+        console.log(users[0].age);
+        console.log(users[1].name);
+        console.log(users[1].age);
+
+        for(let user of users){     // using for...of loop
+          console.log(user.name, user.age);
+        }
+        for(let i = 0; i < users.length; i++){   // using normal for loop
+          console.log(users[i].name);
+        }
+        users.forEach(function(user){   // using forEach()
+          console.log(user.name);
+        });
+        //Add New Object
+        users.push({
+            name: "David",
+            age: 30
+        });
+        console.log(users);
+
+        //Change Value
+        users[0].age = 25;
+        console.log(users[0]);
+
+        //Remove Object
+        users.pop();
+        console.log(users);
+
+        // 5. Array of Arrays (Multidimensional Array)
+        let matrix = [
+          [1, 2],
+          [3, 4]
+        ];
+
+        // 6. Using new Array() Constructor
+        let arry = new Array(1, 2, 3);  const cars = new Array("BMW","Hundai","Creta");
+        //⚠ Not recommended in interviews unless asked.
+
+        // 8. Array from String
+        let str = "Hello";
+        let arryy = Array.from(str);
+        Output:
+        ['H','e','l','l','o']
+
+
+        // 9. Array from Set (Remove duplicates)
+        let arrry = Array.from(new Set([1,2,2,3]));
+        Output:
+        [1,2,3]
+
+        // 10. Using Spread Operator
+        let arr1 = [1,2,3];
+        let arr2 = [...arr1, 4,5];
+
+
+
+        //3. assume function is one more type
+        //Declare Function:
+        function demo() {
+            return "Hello";
+        }
+        console.log(typeof demo);	// function
 
 
 
