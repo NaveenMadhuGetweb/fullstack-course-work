@@ -4,8 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* #ponmudibro{
+            color: blue;
+        } */
+    </style>
 </head>
 <body>
+
+    <h1 id="ponmudibro">Ponmudi</h1>
+    <h1 id="optt">output</h1>
+    <!-- <h1 id="ponmudibro">Ponmudiooo</h1> -->
+
+    <h1 class="classOne">heading1</h1>
+    <h1 class="classOne">heading2</h1>
+    <h1 class="classOne">heading3</h1>
+    
+    <p id="demoArr"></p>
+    
+    <script>
+        // document.getElementById("ponmudibro").style.color = "blue";
+        // document.getElementById("ponmudibro").innerHTML = "<h1>Naveen</h1>";
+        var test = document.getElementById("ponmudibro");
+        document.getElementById("optt").innerHTML = test.innerHTML;
+        console.log(test)
+
+        //array
+        var arr = ['bird1','bird2','bird3'];
+        console.log(arr[0]);
+        for(let x of arr){
+            document.writeln(x);
+        }
+        for(let z =0; z<arr.length; z++){
+            document.writeln(arr[z]);
+        }
+        //string
+        let str = "JavaScript";
+        for(let s of str){
+            document.writeln("<br>" , s);
+        }
+        
+        
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let fLen = fruits.length;
+        let text = "<ul>";
+        for (let i = 0; i < fLen; i++) {
+          text += "<li>" + fruits[i] + "</li>";
+        }
+        text += "</ul>";
+        document.getElementById("demoArr").innerHTML = text;
+
+
+
+
+        // object
+        let myobj = { 
+            name:"lion",
+            behav : "can hunt",
+            age : 20
+        }
+        for(let z in myobj){
+            document.write("<br>", z , "|",  myobj[z] );
+        }
+
+        var sample = document.getElementsByClassName("classOne");
+        for(let el of sample){
+            console.log("hii", el); // el.textContent / .innerText
+        }
+
+        // var testing = document.querySelector(".classOne");
+        // console.log("helllo", testing);
+
+        var testing = document.querySelectorAll(".classOne");
+        console.log("helllo", testing); // return - NodeList - array 
+        testing.forEach(item => {                   // foreach arrow function
+            item.innerHTML = "<i>new texts</i>";
+        });
+        testing.forEach(function(item){   // using forEach()
+          console.log("For-Each:", item);
+        });
+        for(let t=0; t<testing.length; t++){
+            console.log("for Loop:", testing[t]);
+        }
+
+    </script>
+
+
     <h1>JavaScript</h1>
     <p id="ptag">Paragraph Tag</p>
     <p id="ptagText">Paragraph Tag texts</p>
@@ -144,8 +228,7 @@
         // task 3
 function myFunction(){
 
-    var temp = document.getElementById('marks').value;
-    var marks = temp;
+    var marks = document.getElementById('marks').value;
     var grade;
     if( marks >= 90){
         grade = "A";
@@ -177,7 +260,7 @@ function myFunction(){
 function myFun(){
     let sh = 3;
     let in_val = Number(document.getElementById("switchid").value);
-    // document.write(typeof(in_val));
+    //document.write("datatype of entered value:", typeof(in_val));
    
     temp="";
     switch(in_val){
@@ -208,8 +291,9 @@ function myFun(){
     <p>document.querySelector</p>
     <p>This is selects first fetching single element</p>
     <p>document.querySelectorAll</p>
-    <p>document.write(); -> use this is for debugging purpose</p>
+    <p>document.write(); -> use this is for debugging purpose - output show on webpage</p>
     <p>document.writeln();</p>
+    <p>window.alert();</p>
     <p>console.log();</p>
     </body>
     </html>
