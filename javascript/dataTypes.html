@@ -41,6 +41,7 @@
         //2. string
         let s1 = "string1";
         let s2 = 'string2';
+        let s3 = `string2`;
 
         // single character string (JavaScript has no char datatype) // This is also string not have specially "char" datatype in javascript
         let c1 = 'C';
@@ -70,7 +71,11 @@
         //7. symbol
         let sym1 = Symbol();
 	    console.log(typeof sym1);	// symbol
-
+        // - itsis a special datatype 
+        // - unique value  Ex,
+        let symb1 = Symbol("hii");
+        let symb2 = Symbol("hii");
+        console.log(symb1==symb2); // false [Even value is same]
 
         // non-primitive
         //1.Object

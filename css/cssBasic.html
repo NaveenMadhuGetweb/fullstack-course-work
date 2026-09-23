@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 200px;
+            padding:20px;
+            border:5px solid red;
+            box-sizing: content-box;
+        }
+        .box2{
+            width: 200px;
+            padding:20px;
+            border:5px solid red;
+            box-sizing: border-box;
+        }
+        div#borderProps{
+            margin-top:25px;
+            width:200px;
+            height:200px;
+            border:5px solid black;
+            border-top-color: blue;
+            border-top-style: dotted;
+            border-top-width: 10px;
+            border-bottom-left-radius: 20%;
+            border-bottom-color:brown;
+        }
+
+        table,th,td{
+            border: 2px solid black;
+            border-collapse: collapse;
+            background-color: grey;
+            height:40px;
+            width: 50%;
+            text-align: center;
+            border-bottom: 3px solid red;
+        }
+        td:hover{
+            background-color: blueviolet;
+        }
+        
+        div.frTexts{
+            width: 100%;
+            height: auto;
+            background-color: rgb(198, 169, 169);
+            text-align:justify;                 /* left, right, center */
+            word-spacing: 10px;
+            line-height: 25px;
+            letter-spacing: 2px;
+
+        }
+        div.frTexts h1{
+            color:green;
+            text-decoration: overline;  /* line-through, overline, underline, none*/
+            text-decoration-style: dashed;
+            text-decoration-color: brown;
+            text-transform: capitalize;     /* uppercase, lowercase, capitalize */
+        }
+        div.frTexts h2{
+            color: blueviolet;
+            font-size: 40px;
+            text-shadow: 2px 2px  5px red;
+        }
+        div.frTexts h3{
+            font-family: cursive;
+            /* font-weight:900; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">box</div> <br><br>
+
+calculation:content-box
+    content width = 200px
+    padding left + right = 20 + 20 = 40px
+    border left + right = 5 + 5 = 10px
+    Total width = 200 + 40 + 10 = 250px
+
+    <div class="box2">box</div>
+
+calculation:border-box
+    total width = 200px
+    content width = 200 - 40 (padding) - 10 (border)
+                  = 150px  
+
+
+    <div id="borderProps">for border properties</div>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Rahul</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>Robin</td>
+            <td>40</td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <div class="frTexts">
+        <h1>heading</h1>
+        <h2>for Text-shadow properties</h2>
+        <h3>for font-family properties</h3>
+        <p>
+            Use this multi-functional image gallery to share your awesome image and video content with the audience of yur website! It has a wide range of useful features and customizing options.
+            Use this multi-functional image gallery to share your awesome image and video content with the audience of yur website! It has a wide range of useful features and customizing options.
+            Use this multi-functional image gallery to share your awesome image and video content with the audience of yur website! It has a wide range of useful features and customizing options.
+            Use this multi-functional image gallery to share your awesome image and video content with the audience of yur website! It has a wide range of useful features and customizing options.
+            Use this multi-functional image gallery to share your awesome image and video content with the audience of yur website! It has a wide range of useful features and customizing options.
+            Use this multi-functional image gallery to share your awesome image and video content with the audience of yur website! It has a wide range of useful features and customizing options.
+        </p>
+
+    </div>
+
+</body>
+</html>

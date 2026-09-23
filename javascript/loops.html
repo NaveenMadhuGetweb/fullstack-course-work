@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Loops()</h1>
-    <p>types-loops: for, for-in, for-of, while, do while</p>
+    <p>types-loops: for, for-in, for-of, while, do while, forEach() - this is extended loop </p>
     <p><strong>for loop</strong></p>
     <script>
         // let x = 0;
@@ -125,6 +125,16 @@
         }
         console.log("for of");
         console.log(txts);
+    </script>
+
+    <script>
+        let users = [                           //(users -> array of object) []->array, {}->objects
+          { name: "John", age: 20 },            
+          { name: "Jane", age: 22 }
+        ];
+        users.forEach(function(user){   // using forEach()
+          console.log(user.name);
+        });
     </script>
 </body>
 </html>
