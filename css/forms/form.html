@@ -22,8 +22,8 @@
                 <label>number</label>
                 <input type="number" max="6" min="2" autofocus><br>
                 <label>Gender(radio)</label><br>
-                Male<input type="radio" value="male" name=""><br>
-                Female<input type="radio" value="female" name="">  <br>              
+                Male<input type="radio" value="male" name="gender"><br>
+                Female<input type="radio" value="female" name="gender">  <br>              
                 <label>Password</label>
                 <input type="password" name="" required><br>
                 <label>Country(options)</label>
@@ -79,3 +79,33 @@
             </form>
         </div>
     </body>
+
+
+
+
+    <!--    Checkbox access
+
+1. HTML
+    <form action="save.php" method="POST">
+        <label>Skills</label>
+        <input type="checkbox" name="skills[]" value="html"> HTML
+        <input type="checkbox" name="skills[]" value="css"> CSS
+        <input type="checkbox" name="skills[]" value="javascript"> JavaScript
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+ 2. PHP backend   In save.php:
+    <?php
+        $skills = $_POST['skills'] ?? [];
+        foreach ($skills as $skill) {
+            echo $skill . "<br>";
+        }
+    ?>
+
+3. If you want to store it in MySQL
+    $skills = $_POST['skills'] ?? [];
+    $skillsData = implode(',', $skills);
+    echo $skillsData;
+
+ -->

@@ -103,3 +103,119 @@
 // console.log(pattern3.test(text)); // Output: true
 
 </script>
+
+
+
+<!--  Get the values from inputs
+  
+
+
+
+
+
+1. Normal input box
+HTML:
+    <input type="text" id="username">
+
+JavaScript:
+    let username = document.getElementById("username").value;
+    console.log(username);
+
+2. Radio button → one value
+HTML:
+    <input type="radio" name="gender" value="male"> Male
+    <input type="radio" name="gender" value="female"> Female
+    <input type="radio" name="gender" value="other"> Other
+JavaScript:
+    let gender = document.querySelector('input[name="gender"]:checked');
+    console.log(gender.value);
+
+If Female is selected:
+    female
+:checked means give me the radio button that is currently selected.
+
+
+3. Checkbox → multiple values
+HTML:
+    <input type="checkbox" name="skills" value="html"> HTML
+    <input type="checkbox" name="skills" value="css"> CSS
+    <input type="checkbox" name="skills" value="javascript"> JavaScript
+JavaScript:
+    let skills = document.querySelectorAll('input[name="skills"]:checked');
+    skills.forEach(function(skill) {
+        console.log(skill.value);
+    });
+If HTML and JavaScript are selected:
+    html
+    javascript
+
+If you want them as an array:
+    let skills = Array.from(
+        document.querySelectorAll('input[name="skills"]:checked')
+    ).map(skill => skill.value);
+    console.log(skills);
+Result:
+    ["html", "javascript"]
+
+4. Dropdown → one value
+HTML:
+    <select id="course">
+        <option value="java">Java</option>
+        <option value="php">PHP</option>
+        <option value="laravel">Laravel</option>
+    </select>
+JavaScript:
+    let course = document.getElementById("course").value;
+    console.log(course);
+If Laravel is selected: laravel
+
+
+5. Multiple Dropdown → multiple values
+HTML:
+<select id="skills" multiple>
+    <option value="html">HTML</option>
+    <option value="css">CSS</option>
+    <option value="javascript">JavaScript</option>
+</select>
+
+JavaScript:
+    let skills = document.getElementById("skills"); 
+    let selectedSkills = Array.from(skills.selectedOptions)
+        .map(option => option.value);
+    console.log(selectedSkills);
+
+If HTML and JavaScript are selected:
+    ["html", "javascript"]
+
+
+6. Date
+HTML:
+    <input type="date" id="dob">
+JavaScript:
+    let dob = document.getElementById("dob").value;
+    console.log(dob);
+Example:
+    2000-06-21
+
+
+
+7. File
+HTML:
+    <input type="file" id="photo">
+JavaScript:
+    let file = document.getElementById("photo").files[0];
+    console.log(file);
+
+You can get information about the selected file:
+    console.log(file.name);
+    console.log(file.size);
+    console.log(file.type);
+
+For example:
+    name → photo.jpg
+    size → 245678
+    type → image/jpeg
+
+
+
+-->
