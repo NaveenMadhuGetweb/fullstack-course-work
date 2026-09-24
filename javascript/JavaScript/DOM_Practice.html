@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles/style.css" rel="stylesheet">
+    <script src="scripts/myscript.js"></script>
+
+</head>
+<body>
+    <h1>DOM Manuplation</h1>
+    <p id="txt"> Hello </p>
+<hr>
+    <p id="t1">task one</p>
+<hr>
+    <p id="t2">task two</p>
+    <button id="btn" onclick="Change()">click-Me</button>
+<hr>
+    <p>task three Perform Addition</p>
+    <input type="number" id="inp1">
+    <input type="number" id="inp2">
+    <p id="t3">Look Here</p>
+    <button id="t3btn">Calculate</button>
+<hr>
+    <h4>Guess the Number<i>Enter Between 1 & 9</i></h4>
+    <input type="number" id="inp3">
+    <p id="t4">Your Are Right Or Wrong</p>
+    <button id="t4btn">Check</button>
+<hr>
+    <h4>Guess the Number<i>Enter Between 1 & 9</i><b>Attempts(Scores) If score is 0 then button will disabled</b></h4>
+    <input type="number" id="inp4">
+    <p id="t5">Your Are Right Or Wrong</p>
+    <p id="score">Your Scores 10</p>
+    <button id="t5btn">Check</button>
+<hr>
+
+    <h3>DOM Manuplation (Manuplation CSS Styles)</h3>
+<hr>    
+    <h6>element.style.property</h6>
+    <div id="box"></div>
+    <button id="t6btn">click to change color</button>
+<hr>
+    <h6>setAttribute</h6>
+    <div id="boox"></div>
+    <button id="t7btn">click to change color</button>
+<hr>
+    <h6>oninput event</h6>
+    <input type="text" id="inp5">
+    <b>Look Here: </b><i id="t6"></i>
+
+<hr>    
+    <h6>append content When clk add</h6>
+    <button id="btnt8">Add</button>
+    <div id="t8"></div>
+<hr>
+    <h6>CHANGE Color</h6>
+    <button id="btnt9">change color</button>
+<hr>
+    <h2 id="t9">click btn get caption</h2>
+    <button class="btn10">John</button>        <!-- onclick="getCaption(event)"     can use like this and "event" having the details about an button -->
+    <button class="btn10">Hari</button>        
+    <button class="btn10">Praveen</button>
+<hr>
+    <h2>Click Below elements to remove</h2>
+    <h5 id="remove" class="remove">one</h5>
+    <h5 id="remove" class="remove">two</h5>
+    <h5 id="remove" class="remove">three</h5>
+    <h5 id="remove" class="remove">four</h5>
+    <h5 id="remove" class="remove">five</h5>
+ <hr>   
+    <div id="t10">
+        <p>hellooooo</p>
+    </div>
+<hr>
+    <div id="t11">
+        <p>hello</p>
+    </div>
+<hr>
+    <p id="running" style="color: red;">Getting This Elemts</p>
+    <div id="adjElement" style="border: 2px solid black; height: auto; width: auto; display: inline-block;">
+        <p>AdjacentElement</p>
+
+    </div>
+
+<hr>
+    <div id="t12">
+        <p>hello</p>
+        <p id="p">hello</p>
+    </div>
+
+<hr>
+    <input type="text" id="inp6">
+    <button id="addBtn">Add</button>
+    <ul id="UnOrList">
+        <li>items
+            <button id="delBtn">Delete</button>
+        </li>
+    </ul>
+
+    <br><hr><br><br><br>
+
+    <table>
+        <tr>
+            <th>Col1</th>
+            <th>Col2</th>
+        </tr>
+        <tr>
+            <td>val1</td>
+            <td>val2</td>
+        </tr>
+    </table>
+
+    <h2>STUDENT FORM</h2>
+    <table id="StudentTable">
+        <tr>
+            <th>Name</th>
+            <td><input type="text" id="name"></td>
+        </tr>
+        <tr>
+            <th>Age</th>
+            <td><input type="number" id="age"></td>
+        </tr>
+        <tr>
+            <th>Gender</th>
+            <td><input type="checkbox" class="gender" value="male">Male
+            <input type="checkbox" class="gender" value="female">Female</td>
+        </tr>
+        <tr>
+            <th>Course</th>
+           <td><input type="text" id="course"></td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td><input type="emai" id="email"></td>
+        </tr>
+       <tr><td> <button id="saveBtn">Save</button></td></tr>
+    </table>
+
+    <table id="ResultTable">
+        <tr>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>COURSE</th>
+            <th>GENDER</th>
+            <th>EMAIL</th>
+            <th>ACTION</th>
+        </tr>
+    </table>
+
+    <br><hr><br><br><br>
+
+    
+
+</body>
+</html>

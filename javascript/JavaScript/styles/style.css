@@ -1,0 +1,56 @@
+#box{
+    background-color: blue;
+    height:50px;
+    width:50px;
+}
+
+#boox{
+    background-color: red;
+    height:100px;
+    width:100px;
+    transition: 3s;
+
+}
+
+/* .bgChange{
+    width: 500px;
+    height:200px;
+    background-color: blue;
+} */
+
+#boox.bgChange{
+    width: 500px;
+    height:100px;
+    background-color: blue;                 /* This is not working by js. so need to change color by JS */
+}
+
+#t11{
+    border: 1px solid black;
+    display: inline-block;
+    height: auto;
+    width: auto;
+}
+
+
+
+#name{
+    background-color: red;
+    /* display: inline-block; */
+}
+/* input{
+    background-color: red;    
+} */
+#StudentTable tr input{
+    display: inline;
+    background-color: red;
+}
+#saveBtn{
+background-color: blue;
+transform: translateX(70px);
+}
+
+table,tr,td{
+border: 1px solid red;
+}
+
+

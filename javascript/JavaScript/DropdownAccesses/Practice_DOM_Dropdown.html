@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+1. Load/populate dropdown items<br>
+2. Get the selected item<br>
+3. Store its value in a variable<br>
+4. Set a variable as the selected dropdown value<br><br>
+
+1. Basic HTML dropdown<br>
+
+<select id="courseSelect">
+    <option value="">-- Select Course --</option>
+    <option value="java">Java</option>
+    <option value="php">PHP</option>
+    <option value="javascript">JavaScript</option>
+    <option value="python">Python</option>
+</select>
+
+
+<select id="courseSelectt">
+    <option value="">-- Select Course --</option>
+</select>
+
+    
+</body>
+</html>
+
+<script>
+
+// 2. Get the selected value
+
+let courseSelect = document.getElementById("courseSelect");
+
+courseSelect.addEventListener("change", function () {
+
+    let selectedValue = courseSelect.value;
+
+    console.log(selectedValue);
+
+});
+
+
+// 3. Get both selected value and selected text
+
+courseSelect.addEventListener("change", function () {
+
+    let selectedValue = courseSelect.value;
+
+    let selectedText = courseSelect.options[courseSelect.selectedIndex].text;
+
+    console.log("Value:", selectedValue);
+    console.log("Text:", selectedText);
+
+    // if (selectedValues.length === 0) {
+    //     console.log("No options selected.");
+    // }
+});
+
+
+// 4. Set a variable as the selected dropdown value
+
+// let courseSelect = document.getElementById("courseSelect");
+
+let courseValue = "php";
+
+courseSelect.value = courseValue;       // Now the dropdown will show JavaScript as selected.
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function(){
+
+
+// 5. Load dropdown items dynamically using JavaScript
+// This is especially useful when your dropdown items come from an array, database/API, etc.
+
+let courses = [
+    { id: 1, name: "Java" },
+    { id: 2, name: "PHP" },
+    { id: 3, name: "JavaScript" },
+    { id: 4, name: "JavaScript" },
+    { id: 5, name: "JQuery" }
+];
+
+let courseSelectt = document.getElementById("courseSelectt");
+
+courses.forEach(function(course) {
+
+    let option = document.createElement("option");
+
+    option.value = course.id;
+    option.textContent = course.name;
+
+    courseSelectt.appendChild(option);
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 6. Set selected value after loading items
+// For example, you want PHP (id = 2) to be selected.
+//     let selectedCourseId = 2;
+//     courseSelect.value = selectedCourseId;
+
+let coursess = [
+    { id: 1, name: "Java" },
+    { id: 2, name: "PHP" },
+    { id: 3, name: "JavaScript" },
+    { id: 4, name: "Python" }
+];
+
+let courseSelect = document.getElementById("courseSelect");
+
+coursess.forEach(function(course) {
+
+    let option = document.createElement("option");
+
+    option.value = course.id;
+    option.textContent = course.name;
+
+    courseSelect.appendChild(option);
+
+});
+
+// Existing value
+let selectedCourseId = 2;
+
+// Select PHP
+courseSelect.value = selectedCourseId;
+
+
+
+
+/*
+
+7. Very important: value vs selected text
+
+Suppose:    <option value="2">PHP</option>
+
+There are two different things:
+
+courseSelect.value
+gives:  2
+
+while:  courseSelect.options[courseSelect.selectedIndex].text
+gives:  PHP
+
+So remember:
+
+// Selected option value
+    let value = courseSelect.value;
+
+// Selected option text
+    let text = courseSelect.options[courseSelect.selectedIndex].text;
+
+Most commonly used pattern
+    let selectedValue = document.getElementById("courseSelect").value;
+
+And to set it:
+    document.getElementById("courseSelect").value = selectedValue
+
+*/
+
+
+
+
+
+
+
+});
+
+    
+</script>
